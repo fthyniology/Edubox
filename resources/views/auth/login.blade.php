@@ -26,7 +26,8 @@
                                             <img class="logo-compact w-50 mb-5" src="{{ asset('images/edubox/edubox.png') }}" alt="">
                                         </a>
                                     </div>
-                                    <form action="index.html">
+                                    <form method="POST" action="{{ route('login') }}">
+                                        @csrf
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Email</strong></label>
                                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>

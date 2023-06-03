@@ -4,7 +4,7 @@
                     <li>
                         <a href="{!! url('dashboard'); !!}">
                             <i class="fa fa-cube"></i>
-                            <span class="nav-text">Dashboard</span>
+                            <span class="nav-text">Dashboard {{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Lecturer' : 'Admin') }}</span>
                         </a>
                     </li>
                     <li>

@@ -18,17 +18,30 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Lecturer 1',
                 'email' => 'lecturer@unikl.edu.my',
-                'password' => 'Lect1q2w3e',
+                'password' => 'Edu1q2w3e',
+                'role' => 'lecturer',
             ],
             [
                 'name' => 'Student 1',
                 'email' => 'student@unikl.edu.my',
-                'password' => 'Stud1q2w3e',
+                'password' => 'Edu1q2w3e',
+                'role' => 'student',
+            ],
+            [
+                'name' => 'Admin 1',
+                'email' => 'admin@unikl.edu.my',
+                'password' => 'Edu1q2w3e',
+                'role' => 'admin',
             ],
         ];
 
         foreach ($users as $key => $user) {
-            $user = User::create($user);
+            $user = (object)$user;
+            User::create([
+                'name' => $user->name,
+                'email' => $user->email,
+                'password' => $user->password,
+            ])->assignRole($user->role);
         }
     }
 }
