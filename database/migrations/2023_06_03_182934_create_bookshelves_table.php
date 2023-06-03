@@ -15,8 +15,9 @@ class CreateBookshelvesTable extends Migration
     {
         Schema::create('bookshelves', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100)->nullable();;
+            $table->string('name', 100)->nullable();
             $table->enum('type', ['1', '2'])->nullable()->comment('1: Lecture note, 2: Extra reading')->default('1');
+            $table->foreignId('course_id')->constrained('courses')->onUpdate('cascade')->onDelete('cascade');
             $table->text('file_name')->nullable();
             $table->text('file_dir')->nullable();
             $table->timestamps();

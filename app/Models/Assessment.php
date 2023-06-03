@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Assessment extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'description',
+        'course_id',
+    ];
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class, 'course_id', 'id');
+    }
 }

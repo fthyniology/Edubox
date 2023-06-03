@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Bookshelf extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'type',
+        'course_id',
+        'file_name',
+        'file_dir',
+    ];
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class, 'course_id', 'id');
+    }
 }

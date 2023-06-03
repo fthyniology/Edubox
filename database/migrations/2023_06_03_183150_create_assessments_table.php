@@ -15,8 +15,9 @@ class CreateAssessmentsTable extends Migration
     {
         Schema::create('assessments', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100)->nullable();;
-            $table->text('description')->nullable();;
+            $table->string('name', 100)->nullable();
+            $table->text('description')->nullable();
+            $table->foreignId('course_id')->constrained('courses')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
