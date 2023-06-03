@@ -1,0 +1,105 @@
+/*
+ *  STYLE 1
+ */
+
+ #style-1::-webkit-scrollbar-track
+ {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+     border-radius: 10px;
+     background-color: #3d3d3d;
+ }
+ 
+ #style-1::-webkit-scrollbar
+ {
+     width: 6px;
+     background-color: #F5F5F5;
+ }
+ 
+ #style-1::-webkit-scrollbar-thumb
+ {
+     border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 6px #997b27;
+     background-color: #FECB42;
+ }
+
+
+
+.headerPan {
+    background-color: #252525;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    height: 85vh;
+}
+
+.headerPan::after{
+    background-image: url(../images/edubox/bg.png);
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-header{
+    color: #fff;
+    /* padding: 150px 0; */
+    font-size: 70px;
+}
+
+.p-150{
+    padding: 6% 6% 0;
+}
+
+.landing-right {
+    align-items: center;
+    display: flex;
+}
+
+.bg-dark-lan {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.theme_bg-3 {
+    background-color: #2d2d2d;
+}
+
+.theme_bg-5 {
+    background-color: #252525;
+}
+
+.card-section {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    top: 82%;
+}
+
+.flex-left {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.headertext {
+    margin: auto;
+    width: 70%;
+}
