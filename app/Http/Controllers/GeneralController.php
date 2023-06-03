@@ -15,6 +15,14 @@ class GeneralController extends Controller
     {
         return view('welcome');
     }
+    public function login()
+    {
+        return view('auth.login');
+    }
+    public function signup()
+    {
+        return view('auth.signup');
+    }
 
     /**
      * Show the form for creating a new resource.

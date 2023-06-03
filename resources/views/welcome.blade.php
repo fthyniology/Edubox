@@ -100,7 +100,7 @@
                         </div>
                         <!-- header actions -->
                         <div class="header__actions--four">
-                            <a href="{{ url('dashboard') }}" class="ht-btn ht-btn-xs ht-btn--circle">Sign In</a>
+                            <a href="{{ url('login') }}" class="ht-btn ht-btn-xs ht-btn--circle">Sign In</a>
 
                             <div class="mobile-navigation-icon d-block d-xl-none" id="mobile-menu-trigger">
                                 <i></i>

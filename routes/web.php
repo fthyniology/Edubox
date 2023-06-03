@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 // landing page
 Route::get('/', 'App\Http\Controllers\GeneralController@index');
+Route::get('/login', 'App\Http\Controllers\GeneralController@login');
+Route::get('/sign-up', 'App\Http\Controllers\GeneralController@signup');
 
 
 // Student site
