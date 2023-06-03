@@ -45,5 +45,12 @@ Route::group([
     Route::get('/lecturer', [LecturerController::class, 'index'])->name('course.index');
     Route::get('/lecturer-course', [LecturerController::class, 'lecturercourse'])->name('course.lecturercourse');
     Route::get('/lecturer-students', [LecturerController::class, 'lecturerstudent'])->name('course.lecturerstudent');
-    Route::get('/lecturer-annoucements', [LecturerController::class, 'lecturerannoucement'])->name('course.lecturerannoucement');
+    // Route::get('/lecturer-annoucements', [LecturerController::class, 'lecturerannoucement'])->name('course.lecturerannoucement');
+
+    
+    // tambah add
+    Route::get('/course-setting/add-course', [LecturerController::class, 'lecturersettingaddcourse'])->name('lecturer.addcourse');
+    Route::get('/course-setting/add-annoucement', [LecturerController::class, 'lecturersettingaddannoucement'])->name('lecturer.addannoucement');
 });
+
+

@@ -1,29 +1,47 @@
 <div class="deznav">
             <div class="deznav-scroll">
 				<ul class="metismenu" id="menu">
-                    <li>
+                    <!-- <li>
                         <a href="{!! url('dashboard'); !!}">
                             <i class="fa fa-cube"></i>
                             <span class="nav-text">Dashboard {{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Lecturer' : 'Admin') }}</span>
                         </a>
-                    </li>
+                    </li> -->
+                    @if(auth()->user()->hasRole('lecturer'))
+                        <li>
+                            <a href="{!! url('lecturer'); !!}">
+                                <i class="fa fa-cube"></i>
+                                <span class="nav-text">Dashboard {{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Lecturer' : 'Admin') }}</span>
+                            </a>
+                        </li>
+                    @elseif(auth()->user()->hasRole('student'))
+                        <li>
+                            <a href="{!! url('dashboard'); !!}">
+                                <i class="fa fa-cube"></i>
+                                <span class="nav-text">Dashboard {{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Lecturer' : 'Admin') }}</span>
+                            </a>
+                        </li>
+                    @endif 
+                    
                     <li>
                         <a href="{!! url('course-list'); !!}">
                             <i class="fa fa-graduation-cap"></i>
                             <span class="nav-text">Courselist</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-networking"></i>
-                            <span class="nav-text">Settings</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ url('/lecturer-course') }}">Add Course</a></li>
-                            <li><a href="{{ url('/lecturer-students') }}">Add Students</a></li>
-                            <li><a href="{{ url('/lecturer-annoucements') }}">Add Annoucement</a></li>
-                        </ul>
-                    </li>
+                    @if(auth()->user()->hasRole('lecturer'))
+                        <li>
+                            <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                                <i class="flaticon-381-networking"></i>
+                                <span class="nav-text">Lecurer Settings</span>
+                            </a>
+                            <ul aria-expanded="false">
+                                <li><a href="{{ url('/lecturer-course') }}">Course Settings</a></li>
+                                <li><a href="{{ url('/lecturer-students') }}">Student Settings</a></li>
+                                <!-- <li><a href="{{ url('/lecturer-annoucements') }}">Add Annoucement</a></li> -->
+                            </ul>
+                        </li>
+                    @endif 
                 </ul>
             
 				<div class="plus-box bg-primary sidebar-help" style="color:#252525;">

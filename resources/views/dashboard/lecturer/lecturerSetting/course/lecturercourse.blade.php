@@ -1,101 +1,110 @@
 @extends('dashboard.layouts.index')
 
+@section('breadcrumb')
+    <div class="page-titles mt-0 breadcrumb-custom">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Course Settings</a></li>
+            <!-- <li class="breadcrumb-item"><a href="javascript:void(0)">IMB 20503 - Multimedia Insrtuctional Design</a></li> -->
+        </ol>
+    </div>
+@endsection
+
 @section('content')
-<div class="col-lg-12">
-    <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">Courses Settings</h4>
-        </div>
-        <div class="card-body">
-            <div class="float-right">
-                <!-- <button type="button" class="btn btn-success btn-xs light">
-                    <i class="fa fa-plus mr-2"></i>
-                    Add Course
-                </button> -->
-                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
-                    <i class="fa fa-pencil-square-o mr-1"></i>
-                    edit submission
-                </button>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-responsive-md">
-                    <thead>
-                        <tr>
-                            <th class="width50">
-                                <div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-                                    <input type="checkbox" class="custom-control-input" id="checkAll" required="">
-                                    <label class="custom-control-label" for="checkAll"></label>
-                                </div>
-                            </th>
-                            <th><strong>Course Code</strong></th>
-                            <th><strong>Course Name</strong></th>
-                            <th><strong>Total Student</strong></th>
-                            <th><strong>Semester</strong></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-                                    <input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-                                    <label class="custom-control-label" for="customCheckBox2"></label>
-                                </div>
-                            </td>
-                            <td><strong>ISB 42503</strong></td>
-                            <td><div class="d-flex align-items-center"><span class="w-space-no">Internet Programming</span></div></td>
-                            <td>250</td>
-                            <td>02 Feb 2023</td>
-                            <td>
-                                <div class="d-flex">
-                                    <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-                                    <input type="checkbox" class="custom-control-input" id="customCheckBox3" required="">
-                                    <label class="custom-control-label" for="customCheckBox3"></label>
-                                </div>
-                            </td>
-                            <td><strong>IMB 20503 </strong></td>
-                            <td><div class="d-flex align-items-center"><span class="w-space-no">Multimedia Ins. Design</span></div></td>
-                            <td>90</td>
-                            <td>02 Feb 2023</td>
-                            <td>
-                                <div class="d-flex">
-                                    <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-                                    <input type="checkbox" class="custom-control-input" id="customCheckBox4" required="">
-                                    <label class="custom-control-label" for="customCheckBox4"></label>
-                                </div>
-                            </td>
-                            <td><strong>MPU 3192</strong></td>
-                            <td><div class="d-flex align-items-center"><span class="w-space-no">Philosophy</span></div></td>
-                            <td>120</td>
-                            <td>02 Feb 2023</td>
-                            <td>
-                                <div class="d-flex">
-                                    <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+<div class="row">
+<div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav nav-pills light">
+                    <li class=" nav-item">
+                        <a href="#navpills-1" class="nav-link active" data-toggle="tab" aria-expanded="false">
+                            Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#navpills-2" class="nav-link" data-toggle="tab" aria-expanded="false">
+                            Annoucements
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="tab-content">
+                    
+                    <div id="navpills-1" class="tab-pane active">
+                        <h4 class="float-left">Courses List</h4>
+                        <div class="float-right">
+                            <a href="{{ url('/course-setting/add-course') }}" class="btn btn-success btn-xs">
+                                <i class="fa fa-plus mr-1"></i>
+                                Add Course
+                            </a>
+                            <button type="button" class="btn btn-info btn-xs">
+                                <i class="fa fa-pencil-square-o mr-1"></i>
+                                Edit Course
+                            </button>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="example2" class="table table-hover table-responsive-md">
+                                <thead>
+                                    <tr>
+                                        <th>Course Code</th>
+                                        <th>Course Name</th>
+                                        <th>Semester</th>
+                                        <th>Total Assesment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>IMB 50203</td>
+                                        <td>Multimedia Insrtuctional Design</td>
+                                        <td>Feb 2023</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="navpills-2" class="tab-pane">
+                        <h4 class="float-left">All Annoucement</h4>
+                        <div class="float-right">
+                            <a href="{{ url('/course-setting/add-annoucement') }}" class="btn btn-success btn-xs">
+                                <i class="fa fa-plus mr-1"></i>
+                                Add Annoucement
+                            </a>
+                            <button type="button" class="btn btn-info btn-xs">
+                                <i class="fa fa-pencil-square-o mr-1"></i>
+                                Edit Annoucement
+                            </button>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="example2" class="table table-hover table-responsive-md">
+                                <thead>
+                                    <tr>
+                                        <th>Course Code</th>
+                                        <th>Course Name</th>
+                                        <th>Semester</th>
+                                        <th>Total Assesment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>IMB 50203</td>
+                                        <td>Multimedia Insrtuctional Design</td>
+                                        <td>Feb 2023</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
 </div>
-
-@include('dashboard.lecturer.lecturerSetting.course.coursemodal')
-
 
 @endsection

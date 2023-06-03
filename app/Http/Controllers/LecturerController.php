@@ -19,13 +19,27 @@ class LecturerController extends Controller
     {
         return view('dashboard.lecturer.lecturerSetting.course.lecturercourse');
     }
+    // public function lecturerannoucement()
+    // {
+    //     return view('dashboard.lecturer.lecturerSetting.annoucement.lecturerannoucement');
+    // }
     public function lecturerstudent()
     {
         return view('dashboard.lecturer.lecturerSetting.student.lecturerstudent');
     }
-    public function lecturerannoucement()
+
+    // Tambah add
+    public function lecturersettingaddcourse()
     {
-        return view('dashboard.lecturer.lecturerSetting.annoucement.lecturerannoucement');
+        return view('dashboard.lecturer.lecturerSetting.course.addcourse');
+    }
+    public function lecturersettingaddannoucement()
+    {
+        return view('dashboard.lecturer.lecturerSetting.course.addannoucement');
+    }
+    public function lecturersettingaddstudent()
+    {
+        return view('dashboard.lecturer.lecturerSetting.student.addstudent');
     }
 
     /**

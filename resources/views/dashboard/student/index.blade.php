@@ -1,8 +1,17 @@
 @extends('dashboard.layouts.index')
 
+@section('breadcrumb')
+    <div class="page-titles mt-0 breadcrumb-custom">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Dashboard</a></li>
+            <!-- <li class="breadcrumb-item"><a href="javascript:void(0)"></a></li> -->
+        </ol>
+    </div>
+@endsection
+
 @section('content')
 <div class="row">
-	<div class="col-xl-6 col-lg-6">
+	<!-- <div class="col-xl-6 col-lg-6">
 		<div class="card">
 			<div class="card-body p-4">
 				<h4 class="card-intro-title mb-4">Annoucement</h4>
@@ -47,7 +56,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="col-xl-8 col-lg-8">
 		<div class="card">
 			<div class="card-body">
