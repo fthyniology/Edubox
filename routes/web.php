@@ -36,3 +36,7 @@ Route::get('/lecturer-course', 'App\Http\Controllers\LecturerController@lecturer
 Route::get('/lecturer-students', 'App\Http\Controllers\LecturerController@lecturerstudent');
 Route::get('/lecturer-annoucements', 'App\Http\Controllers\LecturerController@lecturerannoucement');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
