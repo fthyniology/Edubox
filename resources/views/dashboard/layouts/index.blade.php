@@ -11,6 +11,8 @@
     <link href="{{ asset('vendor/fullcalendar/css/fullcalendar.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/dropify.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet" type="text/css"/>
 
 </head>
 <body id="style-1">
@@ -89,7 +91,6 @@
            Support ticket button end
         ***********************************-->
 
-
     </div>
 
     <script src="{{ asset('vendor/global/global.min.js') }}" type="text/javascript"></script>
@@ -103,9 +104,12 @@
     <script src="{{ asset('js/plugins-init/fullcalendar-init.js') }}" type="text/javascript"></script>
     
     <script src="{{ asset('js/custom.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/dropify.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/toastr.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/deznav-init.js') }}" type="text/javascript"></script>
-    <!-- @stack('custom-scripts') -->
 
+    @stack('js')
+    @include('layouts.toastr')
 
 </body>
 </html>

@@ -17,6 +17,7 @@ class CreateAssessmentsTable extends Migration
             $table->id();
             $table->string('name', 100)->nullable();
             $table->text('description')->nullable();
+            $table->enum('type', ['1', '2'])->nullable()->comment('1: Assignment, 2: Quiz')->default('1');
             $table->foreignId('course_id')->constrained('courses')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

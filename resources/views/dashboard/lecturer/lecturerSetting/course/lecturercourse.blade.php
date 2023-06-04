@@ -57,12 +57,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>IMB 50203</td>
-                                        <td>Multimedia Insrtuctional Design</td>
-                                        <td>Feb 2023</td>
-                                        <td>4</td>
-                                    </tr>
+                                    @foreach ($courses as $course)
+                                        <tr>
+                                            <td>{{ $course->course_code ?? '' }}</td>
+                                            <td>{{ $course->name ?? '' }}</td>
+                                            <td>{{ $course->created_at->format('F Y') ?? '' }}</td>
+                                            <td>{{ $course->assessments->count() ?? '' }}</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -84,18 +86,23 @@
                                 <thead>
                                     <tr>
                                         <th>Course Code</th>
-                                        <th>Course Name</th>
+                                        <th>Announcement Name</th>
                                         <th>Semester</th>
-                                        <th>Total Assesment</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>IMB 50203</td>
-                                        <td>Multimedia Insrtuctional Design</td>
-                                        <td>Feb 2023</td>
-                                        <td>4</td>
-                                    </tr>
+                                    @forelse ($announcements as $announcement)
+                                        <tr>
+                                            <td>{{ $announcement->course->course_code ?? '' }}</td>
+                                            <td>{{ $announcement->name ?? '' }}</td>
+                                            <td>{{ $announcement->created_at->format('F Y') ?? '' }}</td>
+                                        </tr>
+
+                                    @empty
+                                        <tr>
+                                            <td colspan="4">No data found</td>
+                                        </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>

@@ -17,7 +17,10 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->foreignId('lecturer_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name')->nullable();
-            $table->text('description')->nullable();;
+            $table->string('course_code')->nullable();
+            $table->text('description')->nullable();
+            $table->string('file_name')->nullable();
+            $table->string('file_dir')->nullable();
             $table->timestamps();
         });
     }

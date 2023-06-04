@@ -12,7 +12,9 @@ class Course extends Model
     protected $fillable = [
         'lecturer_id',
         'name',
-        'description',
+        'course_code',
+        'file_name',
+        'file_dir',
     ];
 
     public function lecturer()

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\LecturerController;
@@ -43,14 +44,15 @@ Route::group([
 
     // Lecturer site
     Route::get('/lecturer', [LecturerController::class, 'index'])->name('course.index');
-    Route::get('/lecturer-course', [LecturerController::class, 'lecturercourse'])->name('course.lecturercourse');
+    Route::get('/lecturer-course', [CoursesController::class, 'lecturercourse'])->name('course.lecturercourse');
     Route::get('/lecturer-students', [LecturerController::class, 'lecturerstudent'])->name('course.lecturerstudent');
     // Route::get('/lecturer-annoucements', [LecturerController::class, 'lecturerannoucement'])->name('course.lecturerannoucement');
 
     
     // tambah add
     Route::get('/course-setting/add-course', [LecturerController::class, 'lecturersettingaddcourse'])->name('lecturer.addcourse');
-    Route::get('/course-setting/add-annoucement', [LecturerController::class, 'lecturersettingaddannoucement'])->name('lecturer.addannoucement');
+    Route::get('/course-setting/add-annoucement', [AnnouncementController::class, 'create'])->name('lecturer.addannoucement');
+    Route::post('/annoucement/store', [AnnouncementController::class, 'store'])->name('announcement.store');
 });
 
 
