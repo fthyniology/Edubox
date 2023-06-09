@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edubox</title>
 
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/edubox/logo-compact.png') }}">
+
+
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('vendor/fullcalendar/css/fullcalendar.min.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet" type="text/css"/>
+    <!-- <link href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet" type="text/css"/> -->
     <link href="{{ asset('vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/dropify.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet" type="text/css"/>

@@ -103,3 +103,56 @@
     margin: auto;
     width: 70%;
 }
+
+.btn-rounded-custom {
+    border-radius: 10px;
+    font-size: 0.813rem !important;
+    padding: 0.625rem 1rem;
+}
+
+.btn-edubox {
+    color: #000;
+    background-color: #fecb42;
+    border-color: #fecb42;
+    font-weight: 500;
+}
+.btn-edubox:hover {
+    color: #fecb42;
+    background-color: #747474;
+    border-color: #fecb42;
+    font-weight: 500;
+}
+
+.text-lpage {
+    color: #fecb42;
+}
+
+.landing-page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient--edubox {
+    /* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), to(#eceefa));
+    background-image: -webkit-linear-gradient(top, #fff 0, #eceefa 100%);
+    background-image: -o-linear-gradient(top, #fff 0, #eceefa 100%); */
+    background-color: radial-gradient(circle, rgba(78,78,78,1) 0%, rgba(37,37,37,1) 100%);
+}
+
+.section-edu-bg {
+    background-color: #2D2D2D;
+}
+
+.post-overlay.gradient-background {
+    color: #fecb42;
+    background-color: #fecb42;
+    background-image: -webkit-linear-gradient(219deg, #9C7AF2 0, #5E61E7 100%);
+    background-image: -o-linear-gradient(219deg, #9C7AF2 0, #5E61E7 100%);
+    background-image: linear-gradient(166deg, rgba(70,126,128,1) 0%, rgba(42,79,80,1) 100%);
+    border-radius: 5px;
+}
+
+.post-overlay-info,.post-overlay-title,.overlay-categories,.headeing{
+    color: #fecb42 !important;
+}

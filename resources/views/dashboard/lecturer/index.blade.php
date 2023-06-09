@@ -1,5 +1,14 @@
 @extends('dashboard.layouts.index')
 
+@section('breadcrumb')
+    <div class="page-titles mt-0 breadcrumb-custom">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Dashboard</a></li>
+            <!-- <li class="breadcrumb-item"><a href="javascript:void(0)">IMB 20503 - Multimedia Insrtuctional Design</a></li> -->
+        </ol>
+    </div>
+@endsection
+
 @section('content')
 <div class="row">
 	<div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-4" >

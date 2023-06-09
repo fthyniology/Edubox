@@ -3,7 +3,7 @@
 @section('breadcrumb')
     <div class="page-titles mt-0 breadcrumb-custom">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active"><a href="javascript:void(0)">Course</a></li>
+            <li class="breadcrumb-item active"><a href="{{ url('/course-list') }}">Courselist</a></li>
             <li class="breadcrumb-item"><a href="javascript:void(0)">IMB 20503 - Multimedia Insrtuctional Design</a></li>
         </ol>
     </div>
@@ -16,88 +16,67 @@
 			<div class="col-xl-8 col-md-8 col-sm-12">
 				<div class="card mb-3">
 					<div class="card-header">
-						<h4 class="card-intro-title mb-4">Annoucements</h4>
+						<h4>
+							Annoucements
+						</h4>
+						@if(auth()->user()->hasRole('lecturer'))
+							<a href="{{ url('/course-setting/add-annoucement') }}" class="btn btn-sm btn-success float-right">
+								<i class="fa fa-plus mt-1 mr-2"></i>
+								Add Post
+							</a>
+						@endif
 					</div>
-						<div class="bootstrap-carousel">
-							<div data-ride="carousel" class="carousel slide" id="carouselExampleCaptions">
-								<ol class="carousel-indicators">
-									<li class="active" data-slide-to="0" data-target="#carouselExampleCaptions">
-									</li>
-									<li data-slide-to="1" data-target="#carouselExampleCaptions" class=""></li>
-									<li data-slide-to="2" data-target="#carouselExampleCaptions" class=""></li>
-								</ol>
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<img class="d-block w-100"  src="{{ asset('images/big/img5.jpg') }}" alt="">
-										<div class="carousel-caption d-none d-md-block">
-											<h5>First slide label</h5>
-											<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-										</div>
+					<div class="card-body">
+						<div class="my-post-content pt-3">							
+							<div class="profile-uploaded-post border-bottom-1 pb-5">
+								<div class="d-flex">
+									<img src="{{ asset('images/profile/1.png') }}" alt="" class="rounded-circle img-fluid lect-posts-img">
+									<div class="lect-posts ml-3">
+										<h4>Mr. Hassan</h4>
+										<p>
+											Next Week Our Final Presentation located in 2011 at 9:30 a.m. 
+										</p>
 									</div>
-									<div class="carousel-item">
-										<img alt="" class="d-block w-100"  src="{{ asset('images/big/img6.jpg') }}">
-										<div class="carousel-caption d-none d-md-block">
-											<h5>Second slide label</h5>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								</div>
+								
+								
+								<hr>
+
+								<div class="comments">
+									<div class="row">
+										<div class="col-lg-1">
+											<img src="{{ asset('images/profile/1.png') }}" alt="" class="rounded-circle img-fluid">
 										</div>
-									</div>
-									<div class="carousel-item">
-										<img alt="" class="d-block w-100"  src="{{ asset('images/big/img7.jpg') }}">
-										<div class="carousel-caption d-none d-md-block">
-											<h5>Third slide label</h5>
-											<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+										<div class="col-lg-11">
+											<h4>Studeng</h4>
+											<p>
+												Next Week Our Final Presentation located in 2011 at 9:30 a.m. 
 											</p>
 										</div>
 									</div>
-								</div><a data-slide="prev" href="#carouselExampleCaptions" class="carousel-control-prev"><span
-										class="carousel-control-prev-icon"></span> <span
-										class="sr-only">Previous</span>
-								</a><a data-slide="next" href="#carouselExampleCaptions" class="carousel-control-next"><span
-										class="carousel-control-next-icon"></span> <span
-										class="sr-only">Next</span></a>
+								</div>
 							</div>
 						</div>
-						<div class="card-header">
-						<div>
-							<h5 class="card-title">
-								<!-- <i class="fa fa-graduation-cap"></i> -->
-								IMB 20503 - Multimedia Insrtuctional Design
-							</h5>
-						</div>
-
 					</div>
-					<div class="card-body">
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						<p class="card-text text-dark">Last updated 3 mins ago</p>
+					<div class="card-footer">
+						<div class="row">
+							<div class="col-lg-1">
+								<img src="{{ asset('images/profile/1.png') }}" alt="" class="rounded-circle img-fluid">
+							</div>
+							<textarea name="textarea" id="textarea" cols="30" rows="5" class="form-control mt-0 bg-transparent col-lg-9" placeholder="Please type what you want...."></textarea> 
+							<div class="col-lg-2">
+								<a href="javascript:void()" class="btn btn-sm btn-info d-flex justify-content-center">
+									<i class="fa fa-reply mt-1 mr-2"></i>
+									Reply
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="col-xl-4 col-md-4 col-sm-12 d-flex" style="flex-direction: column;">
-				<div class="card">
-					<div class="card-header">
-						<p class="mb-0 fs-22 text-primary">Lecturer's Details</p>
-					</div>
-					<div class="card-body">
-						<div class="d-flex mb-3 justify-content-center">
-							<img class="img-fluid rounded-circle" src="{{ asset('images/profile/1.png') }}">
-						</div>
-						<hr>
-						<h3>
-							Jessica Brown
-						</h3>
-						<p>
-							Room 2011 <br>
-							Ext. 2011 <br>
-							+6011-223 3567
-						</p>
-						<a href="{{url('lecturerprofile')}}" class="btn btn-primary float-right btn-sm btn-block">
-							view detail
-						</a>
-
-					</div>
-				</div>
-				<div class="card">
+				<div class="card" style="height: 20%;">
 					<div class="card-body">
 						<h4 class="card-title">Course Progress <span class="badge badge-xs float-right badge-light">60%</span></h4>
 						<div class="progress">
@@ -107,7 +86,114 @@
 						</div>
 					</div>
 				</div>
+				<div class="card" style="height: 50%;">
+					<div class="card-header">
+						<p class="mb-0 fs-22 text-primary">Lecturer's Details</p>
+					</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-lg-3">
+								<div class="d-flex mb-3 justify-content-center">
+									<img class="img-fluid rounded-circle" src="{{ asset('images/profile/1.png') }}">
+								</div>
+							</div>
+							<div class="col-lg-9">
+								<h3>
+									Jessica Brown
+								</h3>
+								<p>
+									Room 2011 <br>
+									Ext. 2011 <br>
+									+6011-223 3567
+								</p>
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
 			</div>
+
+			<!-- <div class="col-lg-12">
+				<div class="table-responsive">
+					<table class="table table-responsive-md">
+						<thead>
+							<tr>
+								<th class="width50">
+									<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
+										<input type="checkbox" class="custom-control-input" id="checkAll" required="">
+										<label class="custom-control-label" for="checkAll"></label>
+									</div>
+								</th>
+								<th><strong>ROLL NO.</strong></th>
+								<th><strong>NAME</strong></th>
+								<th><strong>Email</strong></th>
+								<th><strong>Date</strong></th>
+								<th><strong>Status</strong></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
+										<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
+										<label class="custom-control-label" for="customCheckBox2"></label>
+									</div>
+								</td>
+								<td><strong>542</strong></td>
+								<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
+								<td>example@example.com	</td>
+								<td>01 August 2020</td>
+								<td><div class="d-flex align-items-center"><i class="fa fa-circle text-success mr-1"></i> Successful</div></td>
+								<td>
+									<div class="d-flex">
+										<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+										<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
+										<input type="checkbox" class="custom-control-input" id="customCheckBox3" required="">
+										<label class="custom-control-label" for="customCheckBox3"></label>
+									</div>
+								</td>
+								<td><strong>542</strong></td>
+								<td><div class="d-flex align-items-center"><img src="images/avatar/2.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
+								<td>example@example.com	</td>
+								<td>01 August 2020</td>
+								<td><div class="d-flex align-items-center"><i class="fa fa-circle text-danger mr-1"></i> Canceled</div></td>
+								<td>
+									<div class="d-flex">
+										<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+										<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
+										<input type="checkbox" class="custom-control-input" id="customCheckBox4" required="">
+										<label class="custom-control-label" for="customCheckBox4"></label>
+									</div>
+								</td>
+								<td><strong>542</strong></td>
+								<td><div class="d-flex align-items-center"><img src="images/avatar/3.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
+								<td>example@example.com	</td>
+								<td>01 August 2020</td>
+								<td><div class="d-flex align-items-center"><i class="fa fa-circle text-warning mr-1"></i> Pending</div></td>
+								<td>
+									<div class="d-flex">
+										<a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+										<a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div> -->
 				
 			<!-- Bookshelf sction -->
 
@@ -286,6 +372,7 @@
 			</div>
 			<div class="col-lg-6">
 				<h4 class="fs-20">Assesment</h4>
+				@if(auth()->user()->hasRole('student'))
 				<div id="accordion-assessment" class="accordion accordion-header-bg accordion-bordered">
 					<div class="accordion__item">
 						<div class="accordion__header accordion__header--info" data-toggle="collapse" data-target="#header4">
@@ -296,6 +383,7 @@
 						<div id="header4" class="collapse accordion__body" data-parent="#accordion-assessment">
 							<div class="accordion__body--text">
 								<div class="row">
+									@if(auth()->user()->hasRole('student'))
 									<div class="col-6">
 										<p>
 											Submission
@@ -303,16 +391,23 @@
 									</div>
 									<div class="col-6">
 										<div class="float-right">
-											<button type="button" class="btn btn-success btn-xs">
+											<a href="{{ url('/submit-assignment') }}" class="btn btn-success btn-xs">
 												<i class="fa fa-plus-circle mr-1"></i>
 												add
-											</button>
-											<button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
+											</a>
+											<a href="{{ url('/submit-assignment') }}" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
 												<i class="fa fa-pencil-square-o mr-1"></i>
 												edit submission
-											</button>
+											</a>
 										</div>
 									</div>
+									@elseif(auth()->user()->hasRole('lecturer'))
+										<div class="col-6">
+											<p>
+												file-name.pdf
+											</p>
+										</div>
+									@endif
 								</div>								
 							</div>
 						</div>
@@ -333,14 +428,14 @@
 									</div>
 									<div class="col-6">
 										<div class="float-right">
-											<button type="button" class="btn btn-success btn-xs">
+											<a href="{{ url('/submit-assignment') }}" class="btn btn-success btn-xs">
 												<i class="fa fa-plus-circle mr-1"></i>
 												add
-											</button>
-											<button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
+											</a>
+											<a href="{{ url('/submit-assignment') }}" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
 												<i class="fa fa-pencil-square-o mr-1"></i>
 												edit submission
-											</button>
+											</a>
 										</div>
 									</div>
 								</div>		
@@ -363,14 +458,14 @@
 									</div>
 									<div class="col-6">
 										<div class="float-right">
-											<button type="button" class="btn btn-success btn-xs">
+											<a href="{{ url('/submit-assignment') }}" class="btn btn-success btn-xs">
 												<i class="fa fa-plus-circle mr-1"></i>
 												add
-											</button>
-											<button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
+											</a>
+											<a href="{{ url('/submit-assignment') }}" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
 												<i class="fa fa-pencil-square-o mr-1"></i>
 												edit submission
-											</button>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -393,10 +488,10 @@
 									</div>
 									<div class="col-5">
 										<div class="float-right">
-											<button type="button" class="btn btn-success btn-xs">
+											<a href="{{url('/quiz-attempt')}}" class="btn btn-success btn-xs">
 												<i class="fa fa-plus-circle mr-1"></i>
 												attempt now
-											</button>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -404,6 +499,9 @@
 						</div>
 					</div>
 				</div>
+				@elseif(auth()->user()->hasRole('lecturer'))
+				<a href="{{ url('/lecturer-submission-view') }}" class="btn btn-secondary btn-block">view Submission</a>
+				@endif
 			</div>
 		</div>
 	</div>

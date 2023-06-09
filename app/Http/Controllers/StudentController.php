@@ -23,6 +23,14 @@ class StudentController extends Controller
     {
         return view('profile.lecturerprofile');
     }
+    public function quizattempt()
+    {
+        return view('dashboard.student.quizattempt');
+    }
+    public function submitassignment()
+    {
+        return view('dashboard.student.submitassignment');
+    }
 
     /**
      * Show the form for creating a new resource.

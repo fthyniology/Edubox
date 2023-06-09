@@ -30333,3 +30333,12 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
     bottom: 0;
 }
 
+.lect-posts-img {
+  width: 10%;
+}
+
+.lect-posts {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}

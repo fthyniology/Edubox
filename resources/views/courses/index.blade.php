@@ -26,7 +26,7 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <div class="btn btn-outline-primary float-right"> <a href="{!! url('course-detail'); !!}">View Detail</a></div>
+                    <a class="btn btn-outline-primary float-right" href="{!! url('course-detail'); !!}">View Detail</a>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <div class="btn btn-outline-primary float-right"> <a href="{!! url('course-detail'); !!}">View Detail</a></div>
+                    <a class="btn btn-outline-primary float-right" href="{!! url('course-detail'); !!}">View Detail</a>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <div class="btn btn-outline-primary float-right"> <a href="{!! url('course-detail'); !!}">View Detail</a></div>
+                    <a class="btn btn-outline-primary float-right" href="{!! url('course-detail'); !!}">View Detail</a>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <div class="btn btn-outline-primary float-right"> <a href="{!! url('course-detail'); !!}">View Detail</a></div>
+                    <a class="btn btn-outline-primary float-right" href="{!! url('course-detail'); !!}">View Detail</a>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <div class="btn btn-outline-primary float-right"> <a href="{!! url('course-detail'); !!}">View Detail</a></div>
+                    <a class="btn btn-outline-primary float-right" href="{!! url('course-detail'); !!}">View Detail</a>
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <div class="btn btn-outline-primary float-right"> <a href="{!! url('course-detail'); !!}">View Detail</a></div>
+                    <a class="btn btn-outline-primary float-right" href="{!! url('course-detail'); !!}">View Detail</a>
                 </div>
             </div>
         </div>

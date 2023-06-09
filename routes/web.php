@@ -22,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [GeneralController::class, 'index'])->name('general.index');
+Route::get('/About-Us', [GeneralController::class, 'aboutus'])->name('general.aboutus');
+Route::get('/faq', [GeneralController::class, 'faq'])->name('general.faq');
 
 Route::group([
     'middleware' => ['auth', 'web']
@@ -31,7 +33,9 @@ Route::group([
     // Student site
     Route::get('/dashboard', [StudentController::class, 'index'])->name('student.index');
     Route::get('/myprofile', [StudentController::class, 'myprofile'])->name('student.myprofile');
-    Route::get('/lecturerprofile', [StudentController::class, 'lecturerprofile'])->name('student.lecturerprofile');
+    // Route::get('/lecturerprofile', [StudentController::class, 'lecturerprofile'])->name('student.lecturerprofile');
+    Route::get('/quiz-attempt', [StudentController::class, 'quizattempt'])->name('student.quizattempt');
+    Route::get('/submit-assignment', [StudentController::class, 'submitassignment'])->name('student.submitassignment');
 
     // Course site
     Route::get('/course-list', [CoursesController::class, 'index'])->name('course.index');
@@ -46,6 +50,8 @@ Route::group([
     Route::get('/lecturer', [LecturerController::class, 'index'])->name('course.index');
     Route::get('/lecturer-course', [CoursesController::class, 'lecturercourse'])->name('course.lecturercourse');
     Route::get('/lecturer-students', [LecturerController::class, 'lecturerstudent'])->name('course.lecturerstudent');
+    Route::get('/lecturer-submission-view', [LecturerController::class, 'lecturerviewsubmission'])->name('course.lecturerviewsubmission');
+    Route::get('/lecturer-quiz-setting', [LecturerController::class, 'lecturerquizsetting'])->name('course.lecturerquizsetting');
     // Route::get('/lecturer-annoucements', [LecturerController::class, 'lecturerannoucement'])->name('course.lecturerannoucement');
 
     

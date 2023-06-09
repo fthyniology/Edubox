@@ -111,118 +111,123 @@
     </div>
     <!--====================  End of header area  ====================-->
 
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area gradient--edubox">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb_box text-center">
+                        <h2 class="text-lpage">About Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb-area end -->
+
     <div class="site-wrapper-reveal">
-        <div class="app-landing-hero-wrapper position-relative">
-            <div class="headerPan">
-                <div class="container-fluid">
-                    <div class="container-max">
-                        <div class="row align-items-center">
-                            <div class="col-6 center-flex">
-                                <div class="headertext ">
-                                    <h4 class="text-header ">
-                                    One Stop For <br> Your Education.
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque tempora officia ducimus, distinctio placeat tenetur pariatur. Qui consequuntur ut excepturi dolores, nihil est officiis nam exercitationem fugit deleniti cum praesentium?
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-6 center-flex">
-                                <img src="landing-assets/images/edubox/landing.svg" style="width: 60%;" class="img-fluid" alt="landing">
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>        
-        </div>
 
-        <!--====================  brand logo area ====================-->
-        <div class="app-landing-brand-logo-area section-space--ptb_120 drak-area bg-dark-lan" id="partners-section">
+         <!--====================  Portfolio Area Start ====================-->
+         <div class="portfolio-pages-wrapper section-space--ptb_100 section-edu-bg">
             <div class="container">
-                <div class="row">
+                <div class="row portfolio-syle-2 section-space--pt_70">
                     <div class="col-lg-12">
-                        <div class="swiper-container carousel-slider__container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="carousel-slider wow move-up">
-                                        <div class="carousel-slider__content pl-0">
-                                            <h6 class="headeing">Connect ideas</h6>
-                                            <div class="text">
-                                                Consider this app a platform for connecting people from everywhere based on their preferences.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="carousel-slider wow move-up">
-                                        <div class="carousel-slider__content pl-0">
-                                            <h6 class="headeing">Make schedules</h6>
-                                            <div class="text">
-                                                An app that is designed for making plans, writing notes, record ideas and remind of your schedules.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="carousel-slider wow move-up">
-                                        <div class="carousel-slider__content pl-0">
-                                            <h6 class="headeing">Manage time</h6>
-                                            <div class="text">
-                                                Controlling your daily tasks, assign and discuss on projects, checking deadlines and set time to relax.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="carousel-slider wow move-up">
-                                        <div class="carousel-slider__content pl-0">
-                                            <h6 class="headeing">Working mobile</h6>
-                                            <div class="text">
-                                                It's easy to switch between different devices while keeping your data safe with secure login.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="section-title text-center section-space--mb_50">
+                            <h5 class="font-weight--bold text-white mb-2">
+                                Kamy Group III
+                            </h5>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-6 wow move-up">
+                        <div class="portfolio-wrapper mb-30">
+                            <!--======= Single Portfolio Item Start ========-->
+                            <a class="single-portfolio-item" href="portfolio-single-one.html">
+                                <div class="single-portfolio__thumbnail">
+                                    <img class="img-fluid border-radus-5" src="{{ asset('images/edubox/caid.png') }}" alt="Portfolio Image">
+                                </div>
+                                <div class="post-overlay gradient-background"></div>
+                                <div class="single-portfolio__content">
+                                    <div class="post-overlay-info">
+                                        <div class="overlay-categories">Graphic Designer</div>
+                                        <h5 class="post-overlay-title">Syahid Azizan</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <!--===== Single Portfolio Item End =========-->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow move-up">
+                        <div class="portfolio-wrapper mb-30">
+                            <!--======= Single Portfolio Item Start ========-->
+                            <a class="single-portfolio-item" href="portfolio-single-one.html">
+                                <div class="single-portfolio__thumbnail">
+                                    <img class="img-fluid border-radus-5" src="{{ asset('images/edubox/pan.png') }}" alt="Portfolio Image">
+                                </div>
+                                <div class="post-overlay gradient-background"></div>
+                                <div class="single-portfolio__content">
+                                    <div class="post-overlay-info">
+                                        <div class="overlay-categories">Ui Designer</div>
+                                        <h5 class="post-overlay-title">Wan M. Irfan</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <!--===== Single Portfolio Item End =========-->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow move-up">
+                        <div class="portfolio-wrapper mb-30">
+                            <!--======= Single Portfolio Item Start ========-->
+                            <a class="single-portfolio-item" href="portfolio-single-one.html">
+                                <div class="single-portfolio__thumbnail">
+                                    <img class="img-fluid border-radus-5" src="{{ asset('images/edubox/zik.png') }}" alt="Portfolio Image">
+                                </div>
+                                <div class="post-overlay gradient-background"></div>
+                                <div class="single-portfolio__content">
+                                    <div class="post-overlay-info">
+                                        <div class="overlay-categories">Ux Designer</div>
+                                        <h5 class="post-overlay-title">M. Zikry Hafiz</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <!--===== Single Portfolio Item End =========-->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow move-up">
+                        <div class="portfolio-wrapper mb-30">
+                            <!--======= Single Portfolio Item Start ========-->
+                            <a class="single-portfolio-item" href="portfolio-single-one.html">
+                                <div class="single-portfolio__thumbnail">
+                                    <img class="img-fluid border-radus-5" src="{{ asset('images/edubox/lan.png') }}" alt="Portfolio Image">
+                                </div>
+                                <div class="post-overlay gradient-background"></div>
+                                <div class="single-portfolio__content">
+                                    <div class="post-overlay-info">
+                                        <div class="overlay-categories">Front-End Developer</div>
+                                        <h5 class="post-overlay-title">Adlan Fatihin</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <!--===== Single Portfolio Item End =========-->
+                        </div>
+                    </div>
+                        <p class="text-center mt-3">
+                            Edubox is a comprehensive online platform that serves as an efficient and effective 
+                            tool for managing and delivering educational content and resources to students. 
+                            Similar to a learning management system (LMS), Edubox is equipped with features 
+                            such as course management, content delivery, assessment tools, communication tools, 
+                            and analytics that enable students to learn at their own pace and in their own 
+                            preferred environment. With Edubox, students can access course materials, submit assignments, 
+                            participate in discussions, and communicate with their peers and instructors, 
+                            all from a single centralized location.
+                        </p>
                 </div>
             </div>
-
-            <div class="wavify-wrapper drak_hero">
-                <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <defs></defs>
-                    <path class="ht-wavify-drak_hero" d="M 0 187.218 C 237.875 182.932 237.875 182.932 475.75 185.073 C 713.625 187.218 713.625 187.218 951.5 150.671 C 1189.375 114.124 1189.375 114.124 1427.25 115.638 C 1665.125 117.152 1665.125 117.152 1903 150.671 L 1903 611 L 0 611 Z" fill="#252525" style="fill:#252525 !important;"></path>
-                </svg>
-            </div>
-
         </div>
+        <!--====================  Portfolio Area End  ====================-->
+    </div>
 
-        <!--=========  End of brand logo area  ========-->
-
-        <!--=======  animation ===========-->
-
-        <!-- <div class="row-separators-wrap particles-area  bg-dark-lan separators-space" >
-            <div class="constellation-wrapper">
-                <div id="particles-js"></div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="separators-inner text-center">
-                            <h4 class="text-white">Constellation Effect</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!--=======  end animation ===========-->
-
-
-        <!--========= App Landing Bottom Banner Area Start ==========-->
-        <div class="app-landing-bottom-banner-area app-bottom-bg  drak-area theme_bg-5">
+    <!--========= App Landing Bottom Banner Area Start ==========-->
+    <div class="app-landing-bottom-banner-area app-bottom-bg  drak-area theme_bg-5">
             <div class="container">
             </div>
             <div class="footer-area-wrapper">
@@ -262,7 +267,6 @@
 
         </div>
         <!--========== App Landing Bottom Banner Area End ===========-->
-    </div>
 
     
     <!--====================  scroll top ====================-->
@@ -281,7 +285,7 @@
                         <div class="col-md-6 col-8">
                             <!-- logo -->
                             <div class="logo">
-                                <a href="{{ url('/') }}">
+                                <a href="index.html">
                                     <!-- <img src="landing-assets/images/logo/logo-dark.png" class="img-fluid" alt=""> -->
                                     <img src="landing-assets/images/edubox/edubox.png" class="img-fluid light-logo" alt="edubox">
                                 </a>

@@ -16,13 +16,18 @@
             <div class="card-body">
                 <ul class="nav nav-pills light">
                     <li class=" nav-item">
-                        <a href="#navpills-1" class="nav-link active" data-toggle="tab" aria-expanded="false">
+                        <a href="#navpills-course" class="nav-link active" data-toggle="tab" aria-expanded="false">
                             Courses
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#navpills-2" class="nav-link" data-toggle="tab" aria-expanded="false">
+                        <a href="#navpills-annoucement" class="nav-link" data-toggle="tab" aria-expanded="false">
                             Annoucements
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#navpills-quiz" class="nav-link" data-toggle="tab" aria-expanded="false">
+                            Quiz
                         </a>
                     </li>
                 </ul>
@@ -34,7 +39,7 @@
             <div class="card-body">
                 <div class="tab-content">
                     
-                    <div id="navpills-1" class="tab-pane active">
+                    <div id="navpills-course" class="tab-pane active">
                         <h4 class="float-left">Courses List</h4>
                         <div class="float-right">
                             <a href="{{ url('/course-setting/add-course') }}" class="btn btn-success btn-xs">
@@ -69,7 +74,7 @@
                             </table>
                         </div>
                     </div>
-                    <div id="navpills-2" class="tab-pane">
+                    <div id="navpills-annoucement" class="tab-pane">
                         <h4 class="float-left">All Annoucement</h4>
                         <div class="float-right">
                             <a href="{{ url('/course-setting/add-annoucement') }}" class="btn btn-success btn-xs">
@@ -103,6 +108,39 @@
                                             <td colspan="4">No data found</td>
                                         </tr>
                                     @endforelse
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="navpills-quiz" class="tab-pane">
+                        <h4 class="float-left">All Quiz</h4>
+                        <div class="float-right">
+                            <a href="{{ url('/lecturer-quiz-setting') }}" class="btn btn-success btn-xs">
+                                <i class="fa fa-plus mr-1"></i>
+                                Add Quiz
+                            </a>
+                            <button type="button" class="btn btn-info btn-xs">
+                                <i class="fa fa-pencil-square-o mr-1"></i>
+                                Edit Quiz
+                            </button>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="example2" class="table table-hover table-responsive-md">
+                                <thead>
+                                    <tr>
+                                        <th>Course ID</th>
+                                        <th>Course</th>
+                                        <th>Quiz Title</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>IMB 20503</td>
+                                        <td>Multimedia Insrtuctional Design</td>
+                                        <td>Quiz</td>
+                                        <td>20 Sep 2023</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

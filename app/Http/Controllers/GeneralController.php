@@ -10,4 +10,12 @@ class GeneralController extends Controller
     {
         return view('welcome');
     }
+    public function aboutus()
+    {
+        return view('landing-page.aboutus');
+    }
+    public function faq()
+    {
+        return view('landing-page.FAQ');
+    }
 }

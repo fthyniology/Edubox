@@ -92,6 +92,7 @@
                                     <ul>
                                         <li><a href="{{ url('/About-Us') }}"><span>About Us</span></a></li>
                                         <li><a href="{{ url('/faq') }}"><span>FAQ</span></a></li>
+            
                                     </ul>
                                 </nav>
                             </div>
@@ -111,40 +112,31 @@
     </div>
     <!--====================  End of header area  ====================-->
 
-    <div class="site-wrapper-reveal">
-        <div class="app-landing-hero-wrapper position-relative">
-            <div class="headerPan">
-                <div class="container-fluid">
-                    <div class="container-max">
-                        <div class="row align-items-center">
-                            <div class="col-6 center-flex">
-                                <div class="headertext ">
-                                    <h4 class="text-header ">
-                                    One Stop For <br> Your Education.
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque tempora officia ducimus, distinctio placeat tenetur pariatur. Qui consequuntur ut excepturi dolores, nihil est officiis nam exercitationem fugit deleniti cum praesentium?
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-6 center-flex">
-                                <img src="landing-assets/images/edubox/landing.svg" style="width: 60%;" class="img-fluid" alt="landing">
-                            </div>
-                        </div>
-                        
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area gradient--edubox">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb_box text-center">
+                        <h2 class="text-lpage">FAQ</h2>
                     </div>
                 </div>
-            </div>        
+            </div>
         </div>
+    </div>
+    <!-- breadcrumb-area end -->
 
-        <!--====================  brand logo area ====================-->
-        <div class="app-landing-brand-logo-area section-space--ptb_120 drak-area bg-dark-lan" id="partners-section">
+    <div class="site-wrapper-reveal">
+        
+             <!--====== Carousel Sliders Wrapper Start =========-->
+        <div class="carousel-sliders-wrapper section-space--ptb_120 section-edu-bg">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="swiper-container carousel-slider__container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
+                                    <!-- Carousel Slider Start -->
                                     <div class="carousel-slider wow move-up">
                                         <div class="carousel-slider__content pl-0">
                                             <h6 class="headeing">Connect ideas</h6>
@@ -153,8 +145,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Carousel Slider End -->
                                 </div>
                                 <div class="swiper-slide">
+                                    <!-- Carousel Slider Start -->
                                     <div class="carousel-slider wow move-up">
                                         <div class="carousel-slider__content pl-0">
                                             <h6 class="headeing">Make schedules</h6>
@@ -163,8 +157,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Carousel Slider End -->
                                 </div>
                                 <div class="swiper-slide">
+                                    <!-- Carousel Slider Start -->
                                     <div class="carousel-slider wow move-up">
                                         <div class="carousel-slider__content pl-0">
                                             <h6 class="headeing">Manage time</h6>
@@ -173,8 +169,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Carousel Slider End -->
                                 </div>
                                 <div class="swiper-slide">
+                                    <!-- Carousel Slider Start -->
                                     <div class="carousel-slider wow move-up">
                                         <div class="carousel-slider__content pl-0">
                                             <h6 class="headeing">Working mobile</h6>
@@ -183,46 +181,20 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Carousel Slider End -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="wavify-wrapper drak_hero">
-                <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <defs></defs>
-                    <path class="ht-wavify-drak_hero" d="M 0 187.218 C 237.875 182.932 237.875 182.932 475.75 185.073 C 713.625 187.218 713.625 187.218 951.5 150.671 C 1189.375 114.124 1189.375 114.124 1427.25 115.638 C 1665.125 117.152 1665.125 117.152 1903 150.671 L 1903 611 L 0 611 Z" fill="#252525" style="fill:#252525 !important;"></path>
-                </svg>
-            </div>
-
         </div>
+        <!--====== Carousel Sliders Wrapper End =======-->
 
-        <!--=========  End of brand logo area  ========-->
+    </div>
 
-        <!--=======  animation ===========-->
-
-        <!-- <div class="row-separators-wrap particles-area  bg-dark-lan separators-space" >
-            <div class="constellation-wrapper">
-                <div id="particles-js"></div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="separators-inner text-center">
-                            <h4 class="text-white">Constellation Effect</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!--=======  end animation ===========-->
-
-
-        <!--========= App Landing Bottom Banner Area Start ==========-->
-        <div class="app-landing-bottom-banner-area app-bottom-bg  drak-area theme_bg-5">
+    <!--========= App Landing Bottom Banner Area Start ==========-->
+    <div class="app-landing-bottom-banner-area app-bottom-bg  drak-area theme_bg-5">
             <div class="container">
             </div>
             <div class="footer-area-wrapper">
@@ -262,8 +234,6 @@
 
         </div>
         <!--========== App Landing Bottom Banner Area End ===========-->
-    </div>
-
     
     <!--====================  scroll top ====================-->
     <a href="#" class="scroll-top" id="scroll-top">
@@ -281,7 +251,7 @@
                         <div class="col-md-6 col-8">
                             <!-- logo -->
                             <div class="logo">
-                                <a href="{{ url('/') }}">
+                                <a href="index.html">
                                     <!-- <img src="landing-assets/images/logo/logo-dark.png" class="img-fluid" alt=""> -->
                                     <img src="landing-assets/images/edubox/edubox.png" class="img-fluid light-logo" alt="edubox">
                                 </a>

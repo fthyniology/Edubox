@@ -144,7 +144,7 @@
                         <h4 class="mb-4">Upcoming Assesment</h4>
                         <div class="table-responsive">
                             <table id="example5" class="table table-hover table-responsive-md">
-                            <thead>
+                                <thead>
                                     <tr>
                                         <th>Subject Name</th>
                                         <th>Topic</th>
