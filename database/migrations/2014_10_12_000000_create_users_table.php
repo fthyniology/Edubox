@@ -16,7 +16,9 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('student_id')->nullable();
             $table->string('email')->unique();
+            $table->string('class_group')->nullable();
             $table->text('address')->nullable();
             $table->string('profile_name')->nullable();
             $table->string('profile_dir')->nullable();
@@ -24,6 +26,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('lecturer_id')->nullable()->constrained('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

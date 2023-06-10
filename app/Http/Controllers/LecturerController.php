@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LecturerController extends Controller
 {
@@ -15,17 +17,51 @@ class LecturerController extends Controller
     {
         return view('dashboard.lecturer.index');
     }
+
     public function lecturercourse()
     {
         return view('dashboard.lecturer.lecturerSetting.course.lecturercourse');
     }
+    
     // public function lecturerannoucement()
     // {
     //     return view('dashboard.lecturer.lecturerSetting.annoucement.lecturerannoucement');
     // }
     public function lecturerstudent()
     {
-        return view('dashboard.lecturer.lecturerSetting.student.lecturerstudent');
+        $students = auth()->user()->students;
+
+        return view('dashboard.lecturer.lecturerSetting.student.lecturerstudent', compact('students'));
+    }
+
+    public function student_store(Request $request)
+    {
+        DB::beginTransaction();
+        
+        $user = User::create([
+            'name' => $request->student_name,
+            'email' => $request->student_email,
+            'password' => $request->password,
+            'student_id' => $request->student_id,
+            'lecturer_id' => auth()->user()->id,
+            'class_group' => $request->class_group,
+        ])->assignRole('student');
+
+        if ($request->hasFile('profile_image')) {
+
+            $destination_path = 'profile_image/' . $user->id ?? 0 . '/';
+            $file_name = $request->file('profile_image')->getClientOriginalName();
+            $request->file('profile_image')->storeAs($destination_path, $file_name);
+
+            $user->update([
+                'profile_name' => $file_name,
+                'profile_dir' => $destination_path,
+            ]);
+        }
+
+        DB::commit();
+
+        return redirect()->route('course.lecturerstudent')->with('success', 'User has been stored.');
     }
 
     // Tambah add

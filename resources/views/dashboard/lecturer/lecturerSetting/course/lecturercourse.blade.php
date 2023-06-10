@@ -62,14 +62,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($courses as $course)
+                                    @forelse ($courses as $course)
                                         <tr>
                                             <td>{{ $course->course_code ?? '' }}</td>
                                             <td>{{ $course->name ?? '' }}</td>
                                             <td>{{ $course->created_at->format('F Y') ?? '' }}</td>
                                             <td>{{ $course->assessments->count() ?? '' }}</td>
                                         </tr>
-                                    @endforeach
+                                    @empty
+                                        <tr>
+                                            <td colspan="4">No data found</td>
+                                        </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>

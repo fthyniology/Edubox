@@ -25,6 +25,7 @@ class UserSeeder extends Seeder
                 'name' => 'Student 1',
                 'email' => 'student@unikl.edu.my',
                 'password' => 'Edu1q2w3e',
+                'lecturer_id' => 1,
                 'role' => 'student',
             ],
             [

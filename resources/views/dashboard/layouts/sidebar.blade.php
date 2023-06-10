@@ -33,7 +33,7 @@
                         <li>
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="flaticon-381-networking"></i>
-                                <span class="nav-text">Lecurer Settings</span>
+                                <span class="nav-text">Lecturer Settings</span>
                             </a>
                             <ul aria-expanded="false">
                                 <li><a href="{{ url('/lecturer-course') }}">Course Settings</a></li>

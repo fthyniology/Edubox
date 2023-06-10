@@ -20,6 +20,9 @@ class User extends Authenticatable
         'address',
         'profile_name',
         'profile_dir',
+        'student_id',
+        'lecturer_id',
+        'class_group',
     ];
 
     protected $hidden = [
@@ -33,5 +36,15 @@ class User extends Authenticatable
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = Hash::make($password);
+    }
+
+    public function lecturer()
+    {
+        return $this->belongsTo(User::class, 'lecturer_id', 'id');
+    }
+
+    public function students()
+    {
+        return $this->hasMany(User::class, 'lecturer_id', 'id');
     }
 }
