@@ -17,6 +17,7 @@ class CreateBookshelvesTable extends Migration
             $table->id();
             $table->string('name', 100)->nullable();
             $table->enum('type', ['1', '2'])->nullable()->comment('1: Lecture note, 2: Extra reading')->default('1');
+            $table->string('url', 100)->nullable();
             $table->foreignId('course_id')->constrained('courses')->onUpdate('cascade')->onDelete('cascade');
             $table->text('file_name')->nullable();
             $table->text('file_dir')->nullable();

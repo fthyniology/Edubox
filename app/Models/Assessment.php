@@ -20,4 +20,9 @@ class Assessment extends Model
     {
         return $this->belongsTo(Course::class, 'course_id', 'id');
     }
+
+    public function submissions()
+    {
+        return $this->hasMany(Submission::class);
+    }
 }

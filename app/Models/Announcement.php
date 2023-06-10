@@ -19,4 +19,9 @@ class Announcement extends Model
     {
         return $this->belongsTo(Course::class, 'course_id', 'id');
     }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

@@ -14,7 +14,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <form action="{{ route('course.store') }}" id="form-store-course" class="needs-validation" method="POST">
+        <form action="{{ route('course.store') }}" id="form-store-course" class="needs-validation" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card">
                 <div class="card-body">
@@ -45,6 +45,10 @@
                                 <option value="1">Lecture notes</option>
                                 <option value="2">Extra Readings</option>
                             </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Name</label>
+                            <input id="bookshelf_name" name="bookshelf_name" type="text" class="form-control" placeholder="Bookshelf Name">
                         </div>
                         <div class="form-group col-md-6 extra-reading-div">
                             <label>Extra Readings URL</label>
@@ -94,11 +98,11 @@
 
         $('#bookshelf_type').on('change', function () {
             if ($(this).val() == 1) {
-                $('.extra-reading-div').show();
-                $('.lecture-note-div').hide();
-            } else {
                 $('.extra-reading-div').hide();
                 $('.lecture-note-div').show();
+            } else {
+                $('.extra-reading-div').show();
+                $('.lecture-note-div').hide();
             }
         });
 

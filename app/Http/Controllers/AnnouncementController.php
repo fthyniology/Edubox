@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
+use App\Models\Comment;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -29,5 +30,20 @@ class AnnouncementController extends Controller
         DB::commit();
 
         return redirect()->route('course.lecturercourse')->with('success', 'Announcement has been stored.');
+    }
+
+    public function comment_store(Request $request, Announcement $annoucement)
+    {
+        DB::beginTransaction();
+
+        $comment = Comment::create([
+            'description' => $request->description ?? null,
+            'announcement_id' => $annoucement->id ?? null,
+            'student_id' => auth()->user()->id ?? null,
+        ]);
+
+        DB::commit();
+
+        return back()->with('success', 'Comment replied.');
     }
 }

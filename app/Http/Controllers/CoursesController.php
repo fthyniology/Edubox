@@ -6,6 +6,7 @@ use App\Models\Announcement;
 use App\Models\Assessment;
 use App\Models\Bookshelf;
 use App\Models\Course;
+use App\Models\Submission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -13,7 +14,9 @@ class CoursesController extends Controller
 {
     public function index()
     {
-        return view('courses.index');
+        $courses = Course::all();
+
+        return view('courses.index', compact('courses'));
     }
 
     public function lecturercourse()
@@ -33,7 +36,7 @@ class CoursesController extends Controller
             'lecturer_id' => auth()->user()->id ?? null,
             'name' => $request->course_name ?? null,
             'course_code' => $request->course_code ?? null,
-            'course_description' => $request->course_description ?? null,
+            'description' => $request->course_description ?? null,
         ]);
 
         if ($request->hasFile('course_image')) {
@@ -49,7 +52,8 @@ class CoursesController extends Controller
         }
 
         $bookshelf = Bookshelf::create([
-            'name' => $request->extra_reading_url ?? null,
+            'name' => $request->bookshelf_name ?? null,
+            'url' => $request->extra_reading_url ?? null,
             'type' => $request->bookshelf_type ?? null,
             'course_id' => $course->id,
         ]);
@@ -80,7 +84,52 @@ class CoursesController extends Controller
 
     public function courseDetail(Request $request, Course $course)
     {
+        
         return view('courses.coursedetail', compact('course'));
+    }
+
+    public function view_submission(Request $request, Course $course)
+    {
+        return view('dashboard.lecturer.submission', compact('course'));
+    }
+
+    public function submit_assignment(Request $request, Assessment $assessment)
+    {
+        return view('dashboard.student.submitassignment', compact('assessment'));
+    }
+
+    public function submission_store(Request $request, Assessment $assessment)
+    {
+        DB::beginTransaction();
+
+        $submission_check = Submission::where('student_id', auth()->user()->id)->where('assessment_id', $assessment->id)->get();
+
+        if (!$submission_check->isEmpty()) {
+            foreach ($submission_check as $key => $submission_delete) {
+                $submission_delete->delete();
+            }
+        }
+
+        $submission = Submission::create([
+            'student_id' => auth()->user()->id ?? null,
+            'assessment_id' => $assessment->id ?? null,
+        ]);
+
+        if ($request->hasFile('submission_image')) {
+
+            $destination_path = 'submission/' . $submission->id ?? 0 . '/';
+            $file_name = $request->file('submission_image')->getClientOriginalName();
+            $request->file('submission_image')->storeAs($destination_path, $file_name);
+
+            $submission->update([
+                'file_name' => $file_name,
+                'file_dir' => $destination_path,
+            ]);
+        }
+
+        DB::commit();
+
+        return redirect()->route('course.courseDetail', $assessment->course->id);
     }
 
     public function edit(Request $request, Course $course)

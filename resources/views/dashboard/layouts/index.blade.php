@@ -112,6 +112,10 @@
     <script src="{{ asset('js/deznav-init.js') }}" type="text/javascript"></script>
 
     @stack('js')
+
+    <script>
+        $('.dropify').dropify();
+    </script>
     @include('layouts.toastr')
 
 </body>

@@ -13,6 +13,7 @@ class Bookshelf extends Model
         'name',
         'type',
         'course_id',
+        'url',
         'file_name',
         'file_dir',
     ];

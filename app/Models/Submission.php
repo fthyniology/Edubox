@@ -25,9 +25,4 @@ class Submission extends Model
     {
         return $this->belongsTo(Assessment::class, 'assessment_id', 'id');
     }
-
-    public function submissions()
-    {
-        return $this->hasMany(Submission::class);
-    }
 }
