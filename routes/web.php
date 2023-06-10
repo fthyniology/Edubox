@@ -50,6 +50,7 @@ Route::group([
     Route::get('/lecturer', [LecturerController::class, 'index'])->name('course.index');
     Route::get('/lecturer-course', [CoursesController::class, 'lecturercourse'])->name('course.lecturercourse');
     Route::get('/lecturer-students', [LecturerController::class, 'lecturerstudent'])->name('course.lecturerstudent');
+    Route::get('/lecturer-add-students', [LecturerController::class, 'addstudent'])->name('student.addstudent');
     Route::get('/lecturer-submission-view', [LecturerController::class, 'lecturerviewsubmission'])->name('course.lecturerviewsubmission');
     Route::get('/lecturer-quiz-setting', [LecturerController::class, 'lecturerquizsetting'])->name('course.lecturerquizsetting');
     // Route::get('/lecturer-annoucements', [LecturerController::class, 'lecturerannoucement'])->name('course.lecturerannoucement');

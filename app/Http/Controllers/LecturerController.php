@@ -51,6 +51,10 @@ class LecturerController extends Controller
     {
         return view('dashboard.lecturer.lecturerSetting.quiz.quizsetting');
     }
+    public function addstudent()
+    {
+        return view('dashboard.lecturer.lecturerSetting.student.addstudent');
+    }
 
     /**
      * Show the form for creating a new resource.

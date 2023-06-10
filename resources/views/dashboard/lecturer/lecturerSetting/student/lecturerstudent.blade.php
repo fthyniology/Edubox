@@ -8,14 +8,10 @@
         </div>
         <div class="card-body">
             <div class="float-right">
-                <!-- <button type="button" class="btn btn-success btn-xs light">
-                    <i class="fa fa-plus mr-2"></i>
-                    Add Course
-                </button> -->
-                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <a href="{{ url('/lecturer-add-students') }}" class="btn btn-info btn-xs">
                     <i class="fa fa-pencil-square-o mr-1"></i>
-                    edit submission
-                </button>
+                    Add Student
+                </a>
             </div>
             <div class="table-responsive">
                 <table class="table table-responsive-md">
@@ -27,11 +23,10 @@
                                     <label class="custom-control-label" for="checkAll"></label>
                                 </div>
                             </th>
-                            <th><strong>ROLL NO.</strong></th>
-                            <th><strong>NAME</strong></th>
-                            <th><strong>Email</strong></th>
-                            <th><strong>Date</strong></th>
-                            <th><strong>Status</strong></th>
+                            <th><strong>Student ID</strong></th>
+                            <th><strong>Student Name</strong></th>
+                            <th><strong>Student Email</strong></th>
+                            <th><strong>Student Course Group (Class)</strong></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,8 +40,7 @@
                             <td><strong>542</strong></td>
                             <td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
                             <td>example@example.com	</td>
-                            <td>01 August 2020</td>
-                            <td><div class="d-flex align-items-center"><i class="fa fa-circle text-success mr-1"></i> Successful</div></td>
+                            <td>L01-B02</td>
                             <td>
                                 <div class="d-flex">
                                     <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
@@ -64,8 +58,7 @@
                             <td><strong>542</strong></td>
                             <td><div class="d-flex align-items-center"><img src="images/avatar/2.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
                             <td>example@example.com	</td>
-                            <td>01 August 2020</td>
-                            <td><div class="d-flex align-items-center"><i class="fa fa-circle text-danger mr-1"></i> Canceled</div></td>
+                            <td>L01-B02</td>
                             <td>
                                 <div class="d-flex">
                                     <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
@@ -83,8 +76,7 @@
                             <td><strong>542</strong></td>
                             <td><div class="d-flex align-items-center"><img src="images/avatar/3.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
                             <td>example@example.com	</td>
-                            <td>01 August 2020</td>
-                            <td><div class="d-flex align-items-center"><i class="fa fa-circle text-warning mr-1"></i> Pending</div></td>
+                            <td>L01-B02</td>
                             <td>
                                 <div class="d-flex">
                                     <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
@@ -98,8 +90,6 @@
         </div>
     </div>
 </div>
-
-@include('dashboard.lecturer.lecturerSetting.student.studentmodal')
 
 
 @endsection
