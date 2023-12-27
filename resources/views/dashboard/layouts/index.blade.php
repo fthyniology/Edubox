@@ -100,16 +100,16 @@
     <script src="{{ asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}" type="text/javascript"></script>
 
     <script src="{{ asset('vendor/jqueryui/js/jquery-ui.min.js') }}" type="text/javascript"></script>
-
     <script src="{{ asset('vendor/moment/moment.min.js') }}" type="text/javascript"></script>
 
     <script src="{{ asset('vendor/fullcalendar/js/fullcalendar.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/plugins-init/fullcalendar-init.js') }}" type="text/javascript"></script>
     
     <script src="{{ asset('js/custom.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/deznav-init.js') }}" type="text/javascript"></script>
+
     <script src="{{ asset('js/dropify.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/toastr.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/deznav-init.js') }}" type="text/javascript"></script>
 
     @stack('js')
 

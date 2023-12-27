@@ -53,6 +53,7 @@ Route::group([
     Route::get('/lecturer-course', [CoursesController::class, 'lecturercourse'])->name('course.lecturercourse');
     Route::get('/lecturer-students', [LecturerController::class, 'lecturerstudent'])->name('course.lecturerstudent');
     Route::get('/lecturer-add-students', [LecturerController::class, 'addstudent'])->name('student.addstudent');
+    Route::get('/lecturer-add-bookshelf', [LecturerController::class, 'addbookshelf'])->name('bookshelf.addbookshelf');
     Route::post('/lecturer/store/students', [LecturerController::class, 'student_store'])->name('student.store');
     Route::get('/lecturer-quiz-setting', [LecturerController::class, 'lecturerquizsetting'])->name('course.lecturerquizsetting');
     // Route::get('/lecturer-annoucements', [LecturerController::class, 'lecturerannoucement'])->name('course.lecturerannoucement');

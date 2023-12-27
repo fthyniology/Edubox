@@ -308,41 +308,6 @@
     </div>
     <!--====================  End of mobile menu overlay  ====================-->
 
-    <!--====================  search overlay ====================-->
-    <div class="search-overlay" id="search-overlay">
-        <div class="search-overlay__inner">
-            <div class="search-overlay__header">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 col-8">
-                            <!-- logo -->
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="landing-assets/images/edubox/edubox.png" class="img-fluid light-logo" alt="Saas">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-4">
-                            <!-- search content -->
-                            <div class="search-content text-right">
-                                <span class="mobile-navigation-close-icon" id="search-close-trigger"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="search-overlay__body">
-                <div class="search-overlay__form">
-                    <form action="#">
-                        <input type="text" placeholder="Enter search keyword...">
-                        <button type="submit"><i class="far fa-search"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--====================  End of search overlay  ====================-->
-
     <!-- JS ============================================ -->
     
     <!-- Modernizer JS  -->

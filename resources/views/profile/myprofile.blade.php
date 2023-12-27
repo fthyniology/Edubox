@@ -1,5 +1,14 @@
 @extends('dashboard.layouts.index')
 
+@section('breadcrumb')
+    <div class="page-titles mt-0 breadcrumb-custom">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">My Profile</a></li>
+        </ol>
+    </div>
+@endsection
+
 @section('content')
 
 <div class="row">
@@ -11,25 +20,28 @@
                 </div>
                 <div class="profile-info">
                     <div class="profile-photo">
-                        <img src="{{ asset('images/profile/profile.png') }}" class="img-fluid rounded-circle" alt="">
+                        @if(auth()->user()->hasRole('lecturer'))
+                            <img src="{{ asset('images/profile/caid.png') }}" class="img-fluid rounded-circle" alt="">
+                        @elseif(auth()->user()->hasRole('student'))
+                            <img src="{{ asset('images/profile/kim.png') }}" class="img-fluid rounded-circle" alt="">
+                        @endif 
                     </div>
                     <div class="profile-details">
                         <div class="profile-name px-3 pt-2">
-                            <h4 class="text-primary mb-0">Kamil Bin Kamal</h4>
+                            @if(auth()->user()->hasRole('lecturer'))
+                                <h4 class="text-primary mb-0">Syahid Azizan</h4>
+                            @elseif(auth()->user()->hasRole('student'))
+                                <h4 class="text-primary mb-0">Wan Muhammad Irfan</h4>
+                            @endif 
                             <p>Bachelor in Multimedia Design</p>
                         </div>
                         <div class="profile-email px-2 pt-2">
-                            <h4 class="text-muted mb-0">kamil@s.unikl.edu.my</h4>
+                            @if(auth()->user()->hasRole('lecturer'))
+                                <h4 class="text-muted mb-0">Hassan@unikl.edu.my</h4>
+                            @elseif(auth()->user()->hasRole('student'))
+                                <h4 class="text-muted mb-0">irfan@s.unikl.edu.my</h4>
+                            @endif 
                             <p>Email</p>
-                        </div>
-                        <div class="dropdown ml-auto">
-                            <a href="#" class="btn btn-primary light sharp" data-toggle="dropdown" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></a>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li class="dropdown-item"><i class="fa fa-user-circle text-primary mr-2"></i> View profile</li>
-                                <li class="dropdown-item"><i class="fa fa-users text-primary mr-2"></i> Add to close friends</li>
-                                <li class="dropdown-item"><i class="fa fa-plus text-primary mr-2"></i> Add to group</li>
-                                <li class="dropdown-item"><i class="fa fa-ban text-primary mr-2"></i> Block</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -38,7 +50,8 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xl-6">
+    @if(auth()->user()->hasRole('student'))
+    <div class="col-xl-12">
         <div class="card">
             <div class="card-body">
                 <div class="profile-statistics">
@@ -56,28 +69,28 @@
             </div>
         </div>
     </div>
+    @endif
     <div class="col-xl-12">
         <div class="card">
             <div class="card-body">
                 <ul class="nav nav-pills light">
+                    @if(auth()->user()->hasRole('lecturer'))
+                    <li class=" nav-item">
+                        <a href="#navpills-1" class="nav-link active" data-toggle="tab" aria-expanded="false">
+                            Student Activity Log
+                        </a>
+                    </li>
+                    @elseif(auth()->user()->hasRole('student'))
                     <li class=" nav-item">
                         <a href="#navpills-1" class="nav-link active" data-toggle="tab" aria-expanded="false">
                             Activity Log
                         </a>
                     </li>
+                    @endif
+
                     <li class="nav-item">
                         <a href="#navpills-2" class="nav-link" data-toggle="tab" aria-expanded="false">
                             Assesment
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#navpills-3" class="nav-link" data-toggle="tab" aria-expanded="true">
-                            Submited
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#navpills-4" class="nav-link" data-toggle="tab" aria-expanded="true">
-                            Course Taken
                         </a>
                     </li>
                 </ul>
@@ -192,12 +205,6 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                    <div id="navpills-3" class="tab-pane">
-                        cccc
-                    </div>
-                    <div id="navpills-4" class="tab-pane">
-                        dddd
                     </div>
                 </div>
             </div>

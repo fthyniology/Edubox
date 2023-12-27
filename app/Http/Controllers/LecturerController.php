@@ -33,6 +33,7 @@ class LecturerController extends Controller
 
         return view('dashboard.lecturer.lecturerSetting.student.lecturerstudent', compact('students'));
     }
+    
 
     public function student_store(Request $request)
     {
@@ -90,6 +91,10 @@ class LecturerController extends Controller
     public function addstudent()
     {
         return view('dashboard.lecturer.lecturerSetting.student.addstudent');
+    }
+    public function addbookshelf()
+    {
+        return view('dashboard.lecturer.lecturerSetting.bookshelf.addbookshelf');
     }
 
     /**

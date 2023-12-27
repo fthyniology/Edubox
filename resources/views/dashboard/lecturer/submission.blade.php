@@ -1,5 +1,14 @@
 @extends('dashboard.layouts.index')
 
+@section('breadcrumb')
+    <div class="page-titles mt-0 breadcrumb-custom">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Students Submission</a></li>
+        </ol>
+    </div>
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-lg-12">
@@ -26,7 +35,7 @@
                                     @foreach ($assessment->submissions as $submission)
                                         <tr>
                                         <td><strong>{{ $submission->student_id ?? '' }}</strong></td>
-                                            <td><div class="d-flex align-items-center"><img ssrc="{{ $submission->student->profile_pic ? asset('storage/' . $submission->student->profile_dir . '/'. $submission->student->profile_name) : asset('images/profile/1.png') }}" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">{{ $submission->student->name ?? '' }}</span></div></td>
+                                            <td><div class="d-flex align-items-center"><img src="{{ $submission->student->profile_pic ? asset('storage/' . $submission->student->profile_dir . '/'. $submission->student->profile_name) : asset('images/profile/kim.png') }}" class="rounded-lg mr-4" width="24" alt=""/> <span class="w-space-no">{{ $submission->student->name ?? '' }}</span></div></td>
                                             <td>{{ $submission->file_name ?? '' }}</td>
                                             <td>{{ $submission->created_at->format('d F Y') }}</td>
                                             <td><div class="d-flex align-items-center">{{ $assessment->name ?? '' }}</div></td>

@@ -31,7 +31,7 @@
 							<div class="my-post-content pt-3">
 								<div class="profile-uploaded-post border-bottom-1 pb-5">
 									<div class="d-flex">
-										<img src="{{ $course->lecturer->profile_pic ? asset('storage/' . $course->lecturer->profile_dir . '/'. $course->lecturer->profile_name) : asset('images/profile/1.png') }}" alt="" class="rounded-circle img-fluid lect-posts-img">
+										<img src="{{ $course->lecturer->profile_pic ? asset('storage/' . $course->lecturer->profile_dir . '/'. $course->lecturer->profile_name) : asset('images/profile/caid.png') }}" alt="" class="rounded-circle img-fluid lect-posts-img">
 										<div class="lect-posts ml-3">
 											<h4>{{ $course->announcements->sortByDesc('created_at')->first()->name ?? '' }}. </h4>
 											<p>
@@ -47,7 +47,7 @@
 										@forelse ($course->announcements->sortByDesc('created_at')->first()->comments as $comment)
 											<div class="row">
 												<div class="col-lg-1">
-													<img src="{{ $course->lecturer->profile_pic ? asset('storage/' . $course->lecturer->profile_dir . '/'. $course->lecturer->profile_name) : asset('images/profile/1.png') }}" alt="" class="rounded-circle img-fluid">
+													<img src="{{ $course->lecturer->profile_pic ? asset('storage/' . $course->lecturer->profile_dir . '/'. $course->lecturer->profile_name) : asset('images/profile/kim.png') }}" alt="" class="rounded-circle img-fluid">
 												</div>
 												<div class="col-lg-11">
 													<h4>{{ $comment->student->name ?? '' }}</h4>

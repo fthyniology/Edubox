@@ -25,11 +25,11 @@
                             Annoucements
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="#navpills-quiz" class="nav-link" data-toggle="tab" aria-expanded="false">
                             Quiz
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -38,10 +38,9 @@
         <div class="card">
             <div class="card-body">
                 <div class="tab-content">
-                    
                     <div id="navpills-course" class="tab-pane active">
-                        <h4 class="float-left">Courses List</h4>
-                        <div class="float-right">
+                        <h4 class="float-left mb-3">Courses List</h4>
+                        <div class="float-right mb-3">
                             <a href="{{ url('/course-setting/add-course') }}" class="btn btn-success btn-xs">
                                 <i class="fa fa-plus mr-1"></i>
                                 Add Course
@@ -59,6 +58,7 @@
                                         <th>Course Name</th>
                                         <th>Semester</th>
                                         <th>Total Assesment</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -68,6 +68,18 @@
                                             <td>{{ $course->name ?? '' }}</td>
                                             <td>{{ $course->created_at->format('F Y') ?? '' }}</td>
                                             <td>{{ $course->assessments->count() ?? '' }}</td>
+                                            <td>
+                                                <div class="float-right">
+                                                    <a href="{{ url('/lecturer-add-bookshelf') }}" class="btn btn-success btn-xs">
+                                                        <i class="fa fa-plus mr-1"></i>
+                                                        Add Bookshelf
+                                                    </a>
+                                                    <button type="button" class="btn btn-info btn-xs">
+                                                        <i class="fa fa-pencil-square-o mr-1"></i>
+                                                        Edit Course
+                                                    </button>
+                                                </div>
+                                            </td>
                                         </tr>
                                     @empty
                                         <tr>
@@ -116,7 +128,7 @@
                             </table>
                         </div>
                     </div>
-                    <div id="navpills-quiz" class="tab-pane">
+                    <!-- <div id="navpills-quiz" class="tab-pane">
                         <h4 class="float-left">All Quiz</h4>
                         <div class="float-right">
                             <a href="{{ url('/lecturer-quiz-setting') }}" class="btn btn-success btn-xs">
@@ -148,7 +160,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

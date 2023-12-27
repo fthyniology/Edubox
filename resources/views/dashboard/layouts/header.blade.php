@@ -26,83 +26,21 @@
                     <div class="pulse-css"></div>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right">
-                      <div id="DZ_W_Notification1" class="widget-media dz-scroll p-3 height380">
-                        <ul class="timeline">
-                          <li>
-                            <div class="timeline-panel">
-                              <div class="media mr-2">
-                                <img alt="image" width="50" src="{{ asset('images/avatar/1.jpg') }}">
-                              </div>
-                              <div class="media-body">
-                                <h6 class="mb-1">Dr sultads Send you Photo</h6>
-                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="timeline-panel">
-                              <div class="media mr-2 media-info">
-                                KG
-                              </div>
-                              <div class="media-body">
-                                <h6 class="mb-1">Resport created successfully</h6>
-                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="timeline-panel">
-                              <div class="media mr-2 media-success">
-                                <i class="fa fa-home"></i>
-                              </div>
-                              <div class="media-body">
-                                <h6 class="mb-1">Reminder : Treatment Time!</h6>
-                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="timeline-panel">
-                              <div class="media mr-2">
-                                <img alt="image" width="50" src="{{ asset('images/avatar/1.jpg') }}">
-                              </div>
-                              <div class="media-body">
-                                <h6 class="mb-1">Dr sultads Send you Photo</h6>
-                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="timeline-panel">
-                              <div class="media mr-2 media-danger">
-                                KG
-                              </div>
-                              <div class="media-body">
-                                <h6 class="mb-1">Resport created successfully</h6>
-                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div class="timeline-panel">
-                              <div class="media mr-2 media-primary">
-                                <i class="fa fa-home"></i>
-                              </div>
-                              <div class="media-body">
-                                <h6 class="mb-1">Reminder : Treatment Time!</h6>
-                                <small class="d-block">29 July 2020 - 02:26 PM</small>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                    </div>
-                    <a class="all-notification" href="javascript:;">See all notifications <i class="ti-arrow-right"></i></a>
+                      <div id="DZ_W_Notification1" class="widget-media dz-scroll text-center p-4">
+                        <p class="mb-0">nothing to see</p>
+                      </div>
+                    <!-- <a class="all-notification" href="javascript:;">See all notifications <i class="ti-arrow-right"></i></a> -->
                   </div>
                 </li>
                 <!--===========  End Notification ===========-->
                   <li class="nav-item dropdown header-profile">
                       <a class="nav-link" href="javascript:;" role="button" data-toggle="dropdown">
-                        <img src="{{ asset('images/profile/12.png') }}" width="20" alt=""/>
+                      @if(auth()->user()->hasRole('lecturer'))
+                        <img src="{{ asset('images/profile/caid.png') }}" width="20" alt=""/>
+                      @endif
+                      @if(auth()->user()->hasRole('student'))
+                        <img src="{{ asset('images/profile/kim.png') }}" width="20" alt=""/>
+                      @endif
                         <div class="header-info">
                           <span>{{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Lecturer' : 'Admin') }}<i class="fa fa-caret-down ml-3" aria-hidden="true"></i></span>
                         </div>
