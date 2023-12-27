@@ -134,13 +134,12 @@
                     <div class="col-lg-12">
                         <div class="section-title text-center section-space--mb_50">
                             <h5 class="font-weight--bold text-white mb-2">
-                                Kamy Group III
+                                Edubox
                             </h5>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow move-up">
+                    <!-- <div class="col-lg-3 col-md-6 wow move-up">
                         <div class="portfolio-wrapper mb-30">
-                            <!--======= Single Portfolio Item Start ========-->
                             <a class="single-portfolio-item" href="portfolio-single-one.html">
                                 <div class="single-portfolio__thumbnail">
                                     <img class="img-fluid border-radus-5" src="{{ asset('images/edubox/caid.png') }}" alt="Portfolio Image">
@@ -153,12 +152,10 @@
                                     </div>
                                 </div>
                             </a>
-                            <!--===== Single Portfolio Item End =========-->
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow move-up">
                         <div class="portfolio-wrapper mb-30">
-                            <!--======= Single Portfolio Item Start ========-->
                             <a class="single-portfolio-item" href="portfolio-single-one.html">
                                 <div class="single-portfolio__thumbnail">
                                     <img class="img-fluid border-radus-5" src="{{ asset('images/edubox/pan.png') }}" alt="Portfolio Image">
@@ -171,12 +168,10 @@
                                     </div>
                                 </div>
                             </a>
-                            <!--===== Single Portfolio Item End =========-->
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 wow move-up">
                         <div class="portfolio-wrapper mb-30">
-                            <!--======= Single Portfolio Item Start ========-->
                             <a class="single-portfolio-item" href="portfolio-single-one.html">
                                 <div class="single-portfolio__thumbnail">
                                     <img class="img-fluid border-radus-5" src="{{ asset('images/edubox/zik.png') }}" alt="Portfolio Image">
@@ -189,12 +184,10 @@
                                     </div>
                                 </div>
                             </a>
-                            <!--===== Single Portfolio Item End =========-->
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow move-up">
+                    </div> -->
+                    <div class="col-lg-6 col-md-6 wow move-up">
                         <div class="portfolio-wrapper mb-30">
-                            <!--======= Single Portfolio Item Start ========-->
                             <a class="single-portfolio-item" href="portfolio-single-one.html">
                                 <div class="single-portfolio__thumbnail">
                                     <img class="img-fluid border-radus-5" src="{{ asset('images/edubox/lan.png') }}" alt="Portfolio Image">
@@ -207,7 +200,6 @@
                                     </div>
                                 </div>
                             </a>
-                            <!--===== Single Portfolio Item End =========-->
                         </div>
                     </div>
                         <p class="text-center mt-3">
@@ -254,9 +246,9 @@
                             <div class="col-md-12">
                                 <div class="horizontal-list text-center">
                                     <ul>
-                                        <li> © 2023 Kamy. All Rights Reserved</li>
+                                        <li> © 2023 Edubox. All Rights Reserved</li>
                                         <li><a href="tel:" class="hover-style-link hover-style-link--white">(+60) 123 567990</a></li>
-                                        <li><a href="mailto:contact@aeroland.com" class="hover-style-link hover-style-link--white">helpdesk@unikl.edu.my</a></li>
+                                        <li><a href="mailto:contact@aeroland.com" class="hover-style-link hover-style-link--white">helpdesk@edubox.edu.my</a></li>
                                     </ul>
                                 </div>
                             </div>

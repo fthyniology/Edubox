@@ -221,9 +221,9 @@
                             <div class="col-md-12">
                                 <div class="horizontal-list text-center">
                                     <ul>
-                                        <li> © 2023 Kamy. All Rights Reserved</li>
+                                        <li> © 2023 Edubox. All Rights Reserved</li>
                                         <li><a href="tel:" class="hover-style-link hover-style-link--white">(+60) 123 567990</a></li>
-                                        <li><a href="mailto:contact@aeroland.com" class="hover-style-link hover-style-link--white">helpdesk@unikl.edu.my</a></li>
+                                        <li><a href="mailto:contact@aeroland.com" class="hover-style-link hover-style-link--white">helpdesk@edubox.edu.my</a></li>
                                     </ul>
                                 </div>
                             </div>

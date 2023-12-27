@@ -25,11 +25,11 @@
                             Annoucements
                         </a>
                     </li>
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                         <a href="#navpills-quiz" class="nav-link" data-toggle="tab" aria-expanded="false">
                             Quiz
                         </a>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </div>
@@ -128,7 +128,7 @@
                             </table>
                         </div>
                     </div>
-                    <!-- <div id="navpills-quiz" class="tab-pane">
+                    <div id="navpills-quiz" class="tab-pane">
                         <h4 class="float-left">All Quiz</h4>
                         <div class="float-right">
                             <a href="{{ url('/lecturer-quiz-setting') }}" class="btn btn-success btn-xs">
@@ -160,7 +160,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
