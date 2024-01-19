@@ -1,12 +1,12 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/fthyniology/Edubox/blob/Jawa-v2/public/images/edubox/logo-text.png?raw=true" width="400"></a></p>
 
-# EduBox
+# EduBox 🏫
 
-## Introduction
+## Introduction ✨
 
 Codebase for EduBox's website, for an engaging user experience.
 
-## Table of Contents
+## Table of Contents 🚀
 
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
@@ -14,7 +14,7 @@ Codebase for EduBox's website, for an engaging user experience.
 - [Additional Commands](#additional-commands)
 - [License](#license)
 
-## Prerequisites
+## Prerequisites 🔭
 
 Before you begin, make sure you have the following software installed on your system:
 
@@ -22,7 +22,7 @@ Before you begin, make sure you have the following software installed on your sy
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [Git](https://git-scm.com/)
 
-## Getting Started
+## Getting Started 🛸
 
 1. Clone this repository (if you haven't already):
 
@@ -54,7 +54,7 @@ Before you begin, make sure you have the following software installed on your sy
 
 6. Access the app in your browser at [http://localhost:8000](http://localhost:8000).
 
-## Docker Compose Services
+## Docker Compose Services 🔦
 
 This Docker Compose setup includes the following services:
 
@@ -62,7 +62,7 @@ This Docker Compose setup includes the following services:
 - **edubox-nginx**: A web server container using Nginx to serve the Laravel app.
 - **edubox-database**: The MySQL database container.
 
-## Additional Commands
+## Additional Commands 🏕️
 
 - Stop the Docker containers:
 
@@ -94,15 +94,15 @@ This Docker Compose setup includes the following services:
     node_modules/.bin/blade-formatter resources/views/**/*.blade.php -w
     ```
 
-## Credits
+## Credits 🎸
 
 - [Ariff Fikri](https://github.com/ariff-fikri)
 - [Adlan Fatihin](https://github.com/fthyniology)
 
-## About EduBox
+## About EduBox 🏆
 
 EduBox: Elevate your learning experience with our innovative education site, where knowledge meets accessibility, fostering a dynamic environment for academic growth.
 
-## License
+## License 🪪
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
