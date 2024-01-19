@@ -22,7 +22,7 @@ class LecturerController extends Controller
     {
         return view('dashboard.lecturer.lecturerSetting.course.lecturercourse');
     }
-    
+
     // public function lecturerannoucement()
     // {
     //     return view('dashboard.lecturer.lecturerSetting.annoucement.lecturerannoucement');
@@ -33,12 +33,12 @@ class LecturerController extends Controller
 
         return view('dashboard.lecturer.lecturerSetting.student.lecturerstudent', compact('students'));
     }
-    
+
 
     public function student_store(Request $request)
     {
         DB::beginTransaction();
-        
+
         $user = User::create([
             'name' => $request->student_name,
             'email' => $request->student_email,

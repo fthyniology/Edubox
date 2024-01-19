@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
         ];
 
         foreach ($users as $key => $user) {
-            $user = (object)$user;
+            $user = (object) $user;
             User::create([
                 'name' => $user->name,
                 'email' => $user->email,

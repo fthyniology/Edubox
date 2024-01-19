@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  edubox-app:
+    container_name: edubox-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - edubox-db
+    networks:
+      - laravel-net
+
+  edubox-nginx:
+    image: nginx:latest
+    container_name: edubox-nginx
+    restart: unless-stopped
+    ports:
+      - "8001:80" # Map host port 8000 to Nginx container port 80
+      - "8444:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./public:/var/www/html/public
+      - ./nginx/ssl/:/etc/nginx/ssl/
+    depends_on:
+      - edubox-app
+    networks:
+      - laravel-net
+
+  edubox-db:
+    image: mysql:latest
+    container_name: edubox-db
+    environment:
+      MYSQL_DATABASE: "${DB_DATABASE}"
+      MYSQL_ROOT: "root"
+      MYSQL_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+    ports:
+      - "3308:3308" # Map host port 3306 to MySQL container port 3306
+    networks:
+      - laravel-net
+
+networks:
+  laravel-net:
+    driver: bridge

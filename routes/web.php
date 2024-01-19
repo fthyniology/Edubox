@@ -26,7 +26,7 @@ Route::get('/About-Us', [GeneralController::class, 'aboutus'])->name('general.ab
 Route::get('/faq', [GeneralController::class, 'faq'])->name('general.faq');
 
 Route::group([
-    'middleware' => ['auth', 'web']
+    'middleware' => ['auth', 'web'],
 ], function () {
     // landing page
 
@@ -58,12 +58,10 @@ Route::group([
     Route::get('/lecturer-quiz-setting', [LecturerController::class, 'lecturerquizsetting'])->name('course.lecturerquizsetting');
     // Route::get('/lecturer-annoucements', [LecturerController::class, 'lecturerannoucement'])->name('course.lecturerannoucement');
 
-    
+
     // tambah add
     Route::get('/course-setting/add-course', [LecturerController::class, 'lecturersettingaddcourse'])->name('lecturer.addcourse');
     Route::get('/course-setting/add-annoucement', [AnnouncementController::class, 'create'])->name('lecturer.addannoucement');
     Route::post('/annoucement/store', [AnnouncementController::class, 'store'])->name('announcement.store');
     Route::post('/annoucement/comment/store{annoucement}', [AnnouncementController::class, 'comment_store'])->name('announcement.comment.store');
 });
-
-

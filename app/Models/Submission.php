@@ -20,7 +20,7 @@ class Submission extends Model
     {
         return $this->belongsTo(User::class, 'student_id', 'id');
     }
-    
+
     public function assessment()
     {
         return $this->belongsTo(Assessment::class, 'assessment_id', 'id');

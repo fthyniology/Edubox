@@ -84,7 +84,7 @@ class CoursesController extends Controller
 
     public function courseDetail(Request $request, Course $course)
     {
-        
+
         return view('courses.coursedetail', compact('course'));
     }
 
@@ -104,7 +104,7 @@ class CoursesController extends Controller
 
         $submission_check = Submission::where('student_id', auth()->user()->id)->where('assessment_id', $assessment->id)->get();
 
-        if (!$submission_check->isEmpty()) {
+        if (! $submission_check->isEmpty()) {
             foreach ($submission_check as $key => $submission_delete) {
                 $submission_delete->delete();
             }

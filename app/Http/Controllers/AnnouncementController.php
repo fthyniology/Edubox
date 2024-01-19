@@ -13,7 +13,7 @@ class AnnouncementController extends Controller
     public function create()
     {
         $courses = Course::all();
-        
+
         return view('dashboard.lecturer.lecturerSetting.course.addannoucement', compact('courses'));
     }
 
