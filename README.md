@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/ariff-fikri/pelitacafe/blob/Lan/public/images/edubox\logo-text.png?raw=true" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/fthyniology/Edubox/blob/Jawa-v2/public/images/edubox/logo-text.png?raw=true" width="400"></a></p>
 
 # EduBox
 
