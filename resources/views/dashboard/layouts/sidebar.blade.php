@@ -29,14 +29,20 @@
                             <span class="nav-text">Syllabus</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{!! url('student.pastyearpaper'); !!}">
+                            <i class="fa fa-file"></i>
+                            <span class="nav-text">Past Year SPM Papers</span>
+                        </a>
+                    </li>
                     @if(auth()->user()->hasRole('lecturer'))
                         <li>
                             <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="flaticon-381-networking"></i>
-                                <span class="nav-text">Lecturer Settings</span>
+                                <span class="nav-text">Teacher Settings</span>
                             </a>
                             <ul aria-expanded="false">
-                                <li><a href="{{ url('/lecturer-course') }}">Course Settings</a></li>
+                                <li><a href="{{ url('/lecturer-course') }}">Syllabus Settings</a></li>
                                 <li><a href="{{ url('/lecturer-students') }}">Student Settings</a></li>
                             </ul>
                         </li>

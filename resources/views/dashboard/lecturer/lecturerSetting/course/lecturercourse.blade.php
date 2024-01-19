@@ -3,7 +3,7 @@
 @section('breadcrumb')
     <div class="page-titles mt-0 breadcrumb-custom">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active"><a href="javascript:void(0)">Course Settings</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Teacher Settings</a></li>
             <!-- <li class="breadcrumb-item"><a href="javascript:void(0)">IMB 20503 - Multimedia Insrtuctional Design</a></li> -->
         </ol>
     </div>
@@ -17,7 +17,7 @@
                 <ul class="nav nav-pills light">
                     <li class=" nav-item">
                         <a href="#navpills-course" class="nav-link active" data-toggle="tab" aria-expanded="false">
-                            Courses
+                            Syllabus
                         </a>
                     </li>
                     <li class="nav-item">
@@ -39,23 +39,23 @@
             <div class="card-body">
                 <div class="tab-content">
                     <div id="navpills-course" class="tab-pane active">
-                        <h4 class="float-left mb-3">Courses List</h4>
+                        <h4 class="float-left mb-3">Syllabus List</h4>
                         <div class="float-right mb-3">
                             <a href="{{ url('/course-setting/add-course') }}" class="btn btn-success btn-xs">
                                 <i class="fa fa-plus mr-1"></i>
-                                Add Course
+                                Add Syllabus
                             </a>
                             <button type="button" class="btn btn-info btn-xs">
                                 <i class="fa fa-pencil-square-o mr-1"></i>
-                                Edit Course
+                                Edit Syllabus
                             </button>
                         </div>
                         <div class="table-responsive">
                             <table id="example2" class="table table-hover table-responsive-md">
                                 <thead>
                                     <tr>
-                                        <th>Course Code</th>
-                                        <th>Course Name</th>
+                                        <th>Subject Code</th>
+                                        <th>Syllabus Name</th>
                                         <th>Semester</th>
                                         <th>Total Assesment</th>
                                         <th></th>
@@ -76,7 +76,7 @@
                                                     </a>
                                                     <button type="button" class="btn btn-info btn-xs">
                                                         <i class="fa fa-pencil-square-o mr-1"></i>
-                                                        Edit Course
+                                                        Edit Syllabus
                                                     </button>
                                                 </div>
                                             </td>

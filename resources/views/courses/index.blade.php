@@ -3,7 +3,7 @@
 @section('breadcrumb')
     <div class="page-titles mt-0 breadcrumb-custom">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active"><a href="javascript:void(0)">Courselist</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Syllabus</a></li>
             <!-- <li class="breadcrumb-item"><a href="javascript:void(0)">IMB 20503 - Multimedia Insrtuctional Design</a></li> -->
         </ol>
     </div>

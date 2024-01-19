@@ -30342,3 +30342,15 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   display: flex;
   flex-direction: column;
 }
+
+.login-bg {
+  background: rgba(36,41,45, 0.7) url(../images/edubox/login-bg-01.png) no-repeat center center / cover;
+}
+
+.index-bg {
+  background: rgba(36,41,45, 0.7) url(../images/edubox/login-bg-01.png) no-repeat center center / cover;
+}
+
+.accordion-bd-bg {
+  background: #2f363e;
+}

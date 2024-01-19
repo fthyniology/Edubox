@@ -36,6 +36,8 @@ Route::group([
     // Route::get('/lecturerprofile', [StudentController::class, 'lecturerprofile'])->name('student.lecturerprofile');
     Route::get('/quiz-attempt', [StudentController::class, 'quizattempt'])->name('student.quizattempt');
 
+    Route::get('/past-year-spm-papers', [StudentController::class, 'pastyearpaper'])->name('student.pastyearpaper');
+
     // Course site
     Route::get('/course-list', [CoursesController::class, 'index'])->name('course.index');
     Route::post('/course-list/store', [CoursesController::class, 'store'])->name('course.store');

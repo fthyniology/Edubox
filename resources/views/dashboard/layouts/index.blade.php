@@ -68,7 +68,7 @@
 		<!--**********************************
             Content body start
         ***********************************-->
-        <div class="content-body">
+        <div class="content-body index-bg">
             <!-- row -->
 			<div class="container-fluid">
 				@yield('content')

@@ -3,7 +3,7 @@
 @section('breadcrumb')
     <div class="page-titles mt-0 breadcrumb-custom">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active"><a href="{{ url('/course-list') }}">Courselist</a></li>
+            <li class="breadcrumb-item active"><a href="{{ url('/course-list') }}">Syllabus</a></li>
             <li class="breadcrumb-item"><a href="javascript:void(0)">{{ $course->name ?? '' }}</a></li>
         </ol>
     </div>
@@ -11,9 +11,97 @@
 
 @section('content')
 <div class="row">
+	<div class="col-xl-4 col-sm-12">
+		<div class="card">
+			<div class="card-header">
+				<h4>Bookshelf</h4>
+				<a href="" class="btn btn-outline-primary float-right btn-xs">
+					<i class="fa fa-plus mr-1"></i>
+					Add Chapter
+				</a>
+			</div>
+            <div class="card-body">
+                <ul class="nav nav-pills light">
+                    <li class=" nav-item">
+                        <a href="#navpills-chap1" class="nav-link active" data-toggle="tab" aria-expanded="false">
+                            Chapter 1 : Safety Measures in Laboratory
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#navpills-chap2" class="nav-link" data-toggle="tab" aria-expanded="false">
+							Chapter 2 : Safety Measures in Laboratory
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#navpills-chap3" class="nav-link" data-toggle="tab" aria-expanded="false">
+							Chapter 3 : Safety Measures in Laboratory
+                        </a>
+                    </li>
+                    <li class=" nav-item">
+                        <a href="#navpills-chap4" class="nav-link" data-toggle="tab" aria-expanded="false">
+                            Chapter 4 : Safety Measures in Laboratory
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#navpills-chap5" class="nav-link" data-toggle="tab" aria-expanded="false">
+							Chapter 5 : Safety Measures in Laboratory
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#navpills-chap6" class="nav-link" data-toggle="tab" aria-expanded="false">
+							Chapter 6 : Safety Measures in Laboratory
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+	<div class="col-xl-8 col-sm-12">
+		<div class="tab-content">
+			<div id="navpills-chap1" class="tab-pane active">
+				<div class="card">
+					<div class="card-header">
+						<h4>Chapter 1 : Safety Measures in Laboratory</h4>
+						<a type="button" download href="" class="btn btn-outline-info float-right btn-xs">
+							<i class="fa fa-cloud-download mr-1"></i>
+							Download
+						</a>
+					</div>
+					<div class="card-body">
+						<object data="https://gurubesar.my/wp-content/uploads/2020/09/Form-4-Science-Chapter-9-KSSM.pdf" type="application/pdf" width="100%" height="500px"></object>
+					</div>
+					<div class="card-footer">						
+						<a href="{{ route('student.quizattempt') }}" class="btn btn-outline-primary float-right btn-xs">
+							Go to Quiz
+							<i class="fa fa-chevron-right ml-1"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="navpills-chap2" class="tab-pane">
+				chapter 2
+			</div>
+			<div id="navpills-chap3" class="tab-pane">
+				chapter 3
+			</div>
+			<div id="navpills-chap4" class="tab-pane">
+				chapter 4
+			</div>
+			<div id="navpills-chap5" class="tab-pane">
+				chapter 5
+			</div>
+			<div id="navpills-chap6" class="tab-pane">
+				chapter 6
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
 	<div class="col-xl-12 col-sm-12">
 		<div class="row">
-			<div class="col-xl-8 col-md-8 col-sm-12">
+			<div class="col-xl-8 col-md-8 col-sm-12 d-flex" style="flex-direction: column;">
+				<!-- annoucements -->
 				<div class="card mb-3">
 					<div class="card-header">
 						<h4>
@@ -88,19 +176,10 @@
 					@endif
 				</div>
 			</div>
-
 			<div class="col-xl-4 col-md-4 col-sm-12 d-flex" style="flex-direction: column;">
-				<div class="card" style="height: 20%;">
-					<div class="card-body">
-						<h4 class="card-title">Course Progress <span class="badge badge-xs float-right badge-light">60%</span></h4>
-						<div class="progress">
-							<div class="progress-bar" style="width: 60%; height:6px;" role="progressbar">
-								<span class="sr-only">60% Complete</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="card" style="height: 50%;">
+				
+				<!-- teacher details -->
+				<div class="card">
 					<div class="card-header">
 						<p class="mb-0 fs-22 text-primary">Lecturer's Details</p>
 					</div>
@@ -217,7 +296,7 @@
 								<span class="accordion__header--text">{{ $bookshelf->name ?? '' }}</span>
 								<span class="accordion__header--indicator"></span>
 							</div>
-							<div id="header-{{ $bookshelf->id }}" class="collapse accordion__body" data-parent="#accordion-bookshelf">
+							<div id="header-{{ $bookshelf->id }}" class="collapse accordion-bd-bg  accordion__body" data-parent="#accordion-bookshelf">
 								<div class="accordion__body--text">
 									<div class="row">
 										<div class="col-6">
@@ -241,154 +320,10 @@
 							</div>
 						</div>
 					@endforeach
-					{{-- <div class="accordion__item">
-						<div class="accordion__header collapsed accordion__header--success" data-toggle="collapse" data-target="#header-bg_collapseTwo">
-							<span class="accordion__header--icon"><i class="fa fa-book mr-2"></i></span>
-							<span class="accordion__header--text">Chapter 2 : Front-End Analysis</span>
-							<span class="accordion__header--indicator"></span>
-						</div>
-						<div id="header-bg_collapseTwo" class="collapse accordion__body" data-parent="#accordion-bookshelf">
-							<div class="accordion__body--text">
-							<div class="row">
-									<div class="col-6">
-										<p>
-											WebDevelopment.pptx
-										</p>
-									</div>
-									<div class="col-6">
-										<button type="button" class="btn btn-info float-right btn-xs">
-											<i class="fa fa-cloud-download"></i>
-											download
-										</button>
-									</div>
-								</div>	
-							</div>
-						</div>
-					</div>
-					<div class="accordion__item">
-						<div class="accordion__header collapsed accordion__header--success" data-toggle="collapse" data-target="#header-bg_collapseFour">
-							<span class="accordion__header--icon"><i class="fa fa-book mr-2"></i></span>
-							<span class="accordion__header--text">Chapter 3 : ADDIE Model</span>
-							<span class="accordion__header--indicator"></span>
-						</div>
-						<div id="header-bg_collapseFour" class="collapse accordion__body" data-parent="#accordion-bookshelf">
-							<div class="accordion__body--text">
-								<div class="row">
-									<div class="col-6">
-										<p>
-											WebDevelopment.pptx
-										</p>
-									</div>
-									<div class="col-6">
-										<button type="button" class="btn btn-info float-right btn-xs">
-											<i class="fa fa-cloud-download"></i>
-											download
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="accordion__item">
-						<div class="accordion__header collapsed accordion__header--success" data-toggle="collapse" data-target="#header-bg_collapseFive">
-							<span class="accordion__header--icon"><i class="fa fa-book mr-2"></i></span>
-							<span class="accordion__header--text">Chapter 4 : Web Development</span>
-							<span class="accordion__header--indicator"></span>
-						</div>
-						<div id="header-bg_collapseFive" class="collapse accordion__body" data-parent="#accordion-bookshelf">
-							<div class="accordion__body--text">
-								<div class="row">
-									<div class="col-6">
-										<p>
-											WebDevelopment.pptx
-										</p>
-									</div>
-									<div class="col-6">
-										<button type="button" class="btn btn-info float-right btn-xs">
-											<i class="fa fa-cloud-download"></i>
-											download
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="accordion__item">
-						<div class="accordion__header collapsed accordion__header--success" data-toggle="collapse" data-target="#header-bg_collapseSix">
-							<span class="accordion__header--icon"><i class="fa fa-book mr-2"></i></span>
-							<span class="accordion__header--text">Chapter 5 : Front-End Basic</span>
-							<span class="accordion__header--indicator"></span>
-						</div>
-						<div id="header-bg_collapseSix" class="collapse accordion__body" data-parent="#accordion-bookshelf">
-							<div class="accordion__body--text">
-								<div class="row">
-									<div class="col-6">
-										<p>
-											WebDevelopment.pptx
-										</p>
-									</div>
-									<div class="col-6">
-										<button type="button" class="btn btn-info float-right btn-xs">
-											<i class="fa fa-cloud-download"></i>
-											download
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="accordion__item">
-						<div class="accordion__header collapsed accordion__header--success" data-toggle="collapse" data-target="#header-bg_collapseSeven">
-							<span class="accordion__header--icon"><i class="fa fa-book mr-2"></i></span>
-							<span class="accordion__header--text">Chapter 6 : How to be creative web designer</span>
-							<span class="accordion__header--indicator"></span>
-						</div>
-						<div id="header-bg_collapseSeven" class="collapse accordion__body" data-parent="#accordion-bookshelf">
-							<div class="accordion__body--text">
-								<div class="row">
-									<div class="col-6">
-										<p>
-											WebDevelopment.pptx
-										</p>
-									</div>
-									<div class="col-6">
-										<button type="button" class="btn btn-info float-right btn-xs">
-											<i class="fa fa-cloud-download"></i>
-											download
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="accordion__item">
-						<div class="accordion__header collapsed accordion__header--primary" style="color: #000 !important;" data-toggle="collapse" data-target="#header-bg_collapseThree">
-							<span class="accordion__header--icon"><i class="fa fa-file mr-2"></i></span>
-							<span class="accordion__header--text">"How to be perfect in mutlimedia designer"</span>
-							<span class="accordion__header--indicator"></span>
-						</div>
-						<div id="header-bg_collapseThree" class="collapse accordion__body" data-parent="#accordion-bookshelf">
-							<div class="accordion__body--text">
-								<div class="row">
-									<div class="col-6">
-										<p>
-											WebDevelopment.pptx
-										</p>
-									</div>
-									<div class="col-6">
-										<button type="button" class="btn btn-info float-right btn-xs">
-											<i class="fa fa-cloud-download"></i>
-											download
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div> --}}
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<h4 class="fs-20">Assesment</h4>
+				<h4 class="fs-20">Quizes</h4>
 				@if(auth()->user()->hasRole('student'))
 					<div id="accordion-assessment" class="accordion accordion-header-bg accordion-bordered">
 						@foreach ($course->assessments as $assessment) 
@@ -398,7 +333,7 @@
 									<span class="accordion__header--text">{{ $assessment->name ?? '' }}</span>
 									<span class="accordion__header--indicator"></span>
 								</div>
-								<div id="header4" class="collapse accordion__body" data-parent="#accordion-assessment">
+								<div id="header4" class="collapse accordion-bd-bg accordion__body" data-parent="#accordion-assessment">
 									<div class="accordion__body--text">
 										<div class="row">
 											<div class="col-6"> <p> Submission </p> 
@@ -426,92 +361,6 @@
 								</div>
 							</div>
 						@endforeach
-						{{-- <div class="accordion__item">
-							<div class="accordion__header collapsed accordion__header--info" data-toggle="collapse" data-target="#header5">
-								<span class="accordion__header--icon"></span>
-								<span class="accordion__header--text">Assignment 2</span>
-								<span class="accordion__header--indicator"></span>
-							</div>
-							<div id="header5" class="collapse accordion__body" data-parent="#accordion-assessment">
-								<div class="accordion__body--text">
-									<div class="row">
-										<div class="col-6">
-											<p>
-												Submission
-											</p>
-										</div>
-										<div class="col-6">
-											<div class="float-right">
-												<a href="{{ url('/submit-assignment') }}" class="btn btn-success btn-xs">
-													<i class="fa fa-plus-circle mr-1"></i>
-													add
-												</a>
-												<a href="{{ url('/submit-assignment') }}" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
-													<i class="fa fa-pencil-square-o mr-1"></i>
-													edit submission
-												</a>
-											</div>
-										</div>
-									</div>		
-								</div>
-							</div>
-						</div>
-						<div class="accordion__item">
-							<div class="accordion__header collapsed accordion__header--info" data-toggle="collapse" data-target="#header6">
-								<span class="accordion__header--icon"></span>
-								<span class="accordion__header--text">Final Report Submission</span>
-								<span class="accordion__header--indicator"></span>
-							</div>
-							<div id="header6" class="collapse accordion__body" data-parent="#accordion-assessment">
-								<div class="accordion__body--text">
-									<div class="row">
-										<div class="col-6">
-											<p>
-												Front-end analysis Submission
-											</p>
-										</div>
-										<div class="col-6">
-											<div class="float-right">
-												<a href="{{ url('/submit-assignment') }}" class="btn btn-success btn-xs">
-													<i class="fa fa-plus-circle mr-1"></i>
-													add
-												</a>
-												<a href="{{ url('/submit-assignment') }}" class="btn btn-info btn-xs" data-toggle="modal" data-target=".bd-example-modal-lg">
-													<i class="fa fa-pencil-square-o mr-1"></i>
-													edit submission
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="accordion__item">
-							<div class="accordion__header collapsed accordion__header--info" data-toggle="collapse" data-target="#header7">
-								<span class="accordion__header--icon"></span>
-								<span class="accordion__header--text">Quiz / Test</span>
-								<span class="accordion__header--indicator"></span>
-							</div>
-							<div id="header7" class="collapse accordion__body" data-parent="#accordion-assessment">
-								<div class="accordion__body--text">
-								<div class="row">
-										<div class="col-7">
-											<p>
-												Chapter 6 : How to be creative web designer & Chapter 5 : Front-End Basic
-											</p>
-										</div>
-										<div class="col-5">
-											<div class="float-right">
-												<a href="{{url('/quiz-attempt')}}" class="btn btn-success btn-xs">
-													<i class="fa fa-plus-circle mr-1"></i>
-													attempt now
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> --}}
 					</div>
 				@elseif(auth()->user()->hasRole('lecturer'))
 					<a href="{{ route('course.view.submission', $course->id) }}" class="btn btn-secondary btn-block">View Submission</a>

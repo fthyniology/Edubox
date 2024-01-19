@@ -36,10 +36,10 @@
                   <li class="nav-item dropdown header-profile">
                       <a class="nav-link" href="javascript:;" role="button" data-toggle="dropdown">
                       @if(auth()->user()->hasRole('lecturer'))
-                        <img src="{{ asset('images/profile/caid.png') }}" width="20" alt=""/>
+                        <img src="{{ asset('images/profile/teacher.png') }}" width="20" alt=""/>
                       @endif
                       @if(auth()->user()->hasRole('student'))
-                        <img src="{{ asset('images/profile/kim.png') }}" width="20" alt=""/>
+                        <img src="{{ asset('images/profile/student.png') }}" width="20" alt=""/>
                       @endif
                         <div class="header-info">
                           <span>{{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Lecturer' : 'Admin') }}<i class="fa fa-caret-down ml-3" aria-hidden="true"></i></span>
@@ -68,10 +68,4 @@
   @yield('breadcrumb')
 
 
-  {{-- <div class="page-titles mt-0 breadcrumb-custom">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item active"><a href="javascript:void(0)">Courses</a></li>
-          <li class="breadcrumb-item"><a href="javascript:void(0)">IMB 20503 - Multimedia Insrtuctional Design</a></li>
-      </ol>
-  </div> --}}
 </div>

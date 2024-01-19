@@ -27,6 +27,10 @@ class StudentController extends Controller
     {
         return view('dashboard.student.quizattempt');
     }
+    public function pastyearpaper()
+    {
+        return view('dashboard.student.pastpaper');
+    }
     public function submitassignment()
     {
 
