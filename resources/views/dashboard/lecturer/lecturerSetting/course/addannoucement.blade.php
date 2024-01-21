@@ -3,9 +3,9 @@
 @section('breadcrumb')
     <div class="page-titles mt-0 breadcrumb-custom">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active"><a href="{{ url('/lecturer-course') }}">Course Settings</a></li>
-            <li class="breadcrumb-item active"><a href="{{ url('/lecturer-course') }}">Annoucements</a></li>
-            <li class="breadcrumb-item"><a href="javascript:void(0)">Add Annoucement</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/lecturer-course') }}">Syllabus Settings</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/lecturer-course') }}">Annoucements</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Annoucement</a></li>
         </ol>
     </div>
 @endsection
@@ -39,6 +39,7 @@
                     <div class="card-footer">
                         <div class="float-right">
                             <button type="submit" class="btn btn-success light float-right">Save changes</button>
+                            <button type="" class="btn btn-danger light float-right mr-2">cancel</button>
                         </div>
                     </div>
                 </form>

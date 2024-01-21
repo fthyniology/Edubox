@@ -3,9 +3,9 @@
 @section('breadcrumb')
     <div class="page-titles mt-0 breadcrumb-custom">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active"><a href="{{ url('/lecturer-course') }}">Course Settings</a></li>
-            <li class="breadcrumb-item active"><a href="{{ url('/lecturer-course') }}">Course</a></li>
-            <li class="breadcrumb-item"><a href="javascript:void(0)">Add Course</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/lecturer-course') }}">Teacher Settings</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/lecturer-course') }}">Syllabus Settings</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Syllabus</a></li>
         </ol>
     </div>
 @endsection
@@ -19,24 +19,24 @@
             <div class="card">
                 <div class="card-body">
                     <div class="form-row">
-                        <div class="form-group col-md-2">
-                            <label>Course Code</label>
+                        <!-- <div class="form-group col-md-2">
+                            <label>Subject Code</label>
                             <input id="course_code" name="course_code" type="text" class="form-control" required placeholder="Course Code">
-                        </div>
+                        </div> -->
                         <div class="form-group col-md-6">
-                            <label>Course Name</label>
+                            <label>Subject Name</label>
                             <input id="course_name" name="course_name" type="text" class="form-control" required placeholder="Course Name">
                         </div>
                         <div class="form-group col-md-12">
-                            <label>Course Description</label>
+                            <label>Subject Description</label>
                             <input id="course_description" name="course_description" type="text" class="form-control" required placeholder="Course Description">
                         </div>
                         <div class="form-group col-md-4">
-                            <label>Course Image</label>
+                            <label>Subject Image</label>
                             <input id="course_image" name="course_image" type="file" class="dropify" required placeholder="Course Image">
                         </div>
                     </div>
-                    <hr>
+                    <!-- <hr>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label>Add Bookshelf</label>
@@ -73,12 +73,11 @@
                             <label id="assessment-label-name">Assignment Name</label>
                             <input id="assessment_name" name="assessment_name" type="text" class="form-control" placeholder="Assessment Name">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="card-footer">
-                    <!-- <div class="float-right"> -->
                         <button type="submit" class="btn btn-success light float-right">Save changes</button>
-                    <!-- </div> -->
+                        <button type="" class="btn btn-danger light float-right mr-2">cancel</button>
                 </div>
             </div>
         </form>

@@ -11,14 +11,14 @@
                         <li>
                             <a href="{!! url('lecturer'); !!}">
                                 <i class="fa fa-cube"></i>
-                                <span class="nav-text">Dashboard {{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Lecturer' : 'Admin') }}</span>
+                                <span class="nav-text">Dashboard</span>
                             </a>
                         </li>
                     @elseif(auth()->user()->hasRole('student'))
                         <li>
                             <a href="{!! url('dashboard'); !!}">
                                 <i class="fa fa-cube"></i>
-                                <span class="nav-text">Dashboard {{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Lecturer' : 'Admin') }}</span>
+                                <span class="nav-text">Dashboard</span>
                             </a>
                         </li>
                     @endif 
@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{!! url('student.pastyearpaper'); !!}">
+                        <a href="{!! url('past-year-spm-papers'); !!}">
                             <i class="fa fa-file"></i>
                             <span class="nav-text">Past Year SPM Papers</span>
                         </a>

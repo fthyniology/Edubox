@@ -150,4 +150,5 @@ class CoursesController extends Controller
 
         return back()->with('success', 'Course has been deleted.');
     }
+
 }

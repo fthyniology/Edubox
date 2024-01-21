@@ -27,6 +27,16 @@ class LecturerController extends Controller
     {
         return view('dashboard.lecturer.pastpaper');
     }
+
+    
+    public function bookshelf()
+    {
+        return view('dashboard.lecturer.lecturerSetting.bookshelf.bookshelf');
+    }
+    public function quizresult()
+    {
+        return view('dashboard.lecturer.lecturerSetting.quiz.quizresult');
+    }
     
     // public function lecturerannoucement()
     // {

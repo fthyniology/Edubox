@@ -13,7 +13,7 @@
 
 <div class="row">
 	<div class="col-xl-4 col-sm-12">
-		<div class="card">
+		<div class="card h-auto">
 			<div class="card-header">
 				<h4>Past year SPM Papers</h4>
 			</div>
@@ -66,8 +66,6 @@
 					</div>
 					<div class="card-body">
 						<object data="https://gurubesar.my/wp-content/uploads/2020/09/Form-4-Science-Chapter-9-KSSM.pdf" type="application/pdf" width="100%" height="500px"></object>
-					</div>
-					<div class="card-footer">
 					</div>
 				</div>
 			</div>

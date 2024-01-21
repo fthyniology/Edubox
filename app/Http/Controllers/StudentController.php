@@ -15,14 +15,6 @@ class StudentController extends Controller
     {
         return view('dashboard.student.index');
     }
-    public function myprofile()
-    {
-        return view('profile.myprofile');
-    }
-    public function lecturerprofile()
-    {
-        return view('profile.lecturerprofile');
-    }
     public function quizattempt()
     {
         return view('dashboard.student.quizattempt');
