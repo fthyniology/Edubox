@@ -54,20 +54,7 @@
         this.enableDrag();
         var t = new Date,
             n = (t.getDate(), t.getMonth(), t.getFullYear(), new Date(e.now())),
-            a = [{
-                title: "Chicken Burger",
-                start: new Date(e.now() + 158e6),
-                className: "bg-dark"
-            }, {
-                title: "Soft drinks",
-                start: n,
-                end: n,
-                className: "bg-danger"
-            }, {
-                title: "Hot dog",
-                start: new Date(e.now() + 338e6),
-                className: "bg-primary"
-            }],
+            a = [],
             o = this;
         o.$calendarObj = o.$calendar.fullCalendar({
             slotDuration: "00:15:00",

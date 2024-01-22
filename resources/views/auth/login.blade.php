@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="authincation h-100">
+    <div class="authincation h-100 login-bg">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
                 <div class="col-md-6">

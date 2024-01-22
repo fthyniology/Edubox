@@ -2729,7 +2729,7 @@ input[type="button"].btn-block {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 80%;
   left: 0;
   z-index: 1000;
   display: none;
@@ -20967,7 +20967,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   background: #fff !important; }
 
 .fc-unthemed .fc-today {
-  background: #f6f6f6 !important; }
+  background: #FECB42 !important; }
 
 .fc-day-top {
   color: #3e4954 !important; }
@@ -30341,4 +30341,28 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
+
+.login-bg {
+  background: rgba(36,41,45, 0.7) url(../images/edubox/login-bg-01.png) no-repeat center center / cover;
+}
+
+.index-bg {
+  background: rgba(36,41,45, 0.7) url(../images/edubox/login-bg-01.png) no-repeat center center / cover;
+}
+
+.accordion-bd-bg {
+  background: #2f363e;
+}
+
+.dashboard-user{
+  width: 90px;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fc-toolbar .fc-state-active, .fc-toolbar .ui-state-active {
+  z-index: 0 !important;
 }

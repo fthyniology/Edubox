@@ -11,14 +11,14 @@
                   </div>
               </div>
               <ul class="navbar-nav header-right">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <div class="input-group search-area ml-auto d-inline-flex">
                     <input type="text" class="form-control" placeholder="Search here">
                     <div class="input-group-append">
                       <button type="button" class="input-group-text"><i class="flaticon-381-search-2"></i></button>
                     </div>
                   </div>
-                </li>
+                </li> -->
                 <!--=========== Notification ===========-->
                 <li class="nav-item dropdown notification_dropdown">
                   <a class="nav-link  ai-icon" href="javascript:;" role="button" data-toggle="dropdown">
@@ -36,17 +36,16 @@
                   <li class="nav-item dropdown header-profile">
                       <a class="nav-link" href="javascript:;" role="button" data-toggle="dropdown">
                       @if(auth()->user()->hasRole('lecturer'))
-                        <img src="{{ asset('images/profile/caid.png') }}" width="20" alt=""/>
-                      @endif
-                      @if(auth()->user()->hasRole('student'))
-                        <img src="{{ asset('images/profile/kim.png') }}" width="20" alt=""/>
+                        <img src="{{ asset('images/profile/teacher.png') }}" width="20" alt=""/>
+                      @elseif(auth()->user()->hasRole('student'))
+                        <img src="{{ asset('images/profile/student.png') }}" width="20" alt=""/>
                       @endif
                         <div class="header-info">
-                          <span>{{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Lecturer' : 'Admin') }}<i class="fa fa-caret-down ml-3" aria-hidden="true"></i></span>
+                          <span>{{ auth()->user()->hasRole('student') ? 'Student' : (auth()->user()->hasRole('lecturer') ? 'Teacher' : 'Admin') }}<i class="fa fa-caret-down ml-3" aria-hidden="true"></i></span>
                         </div>
                       </a>
                       <div class="dropdown-menu dropdown-menu-right">
-                          <a href="{!! url('myprofile'); !!}" class="dropdown-item ai-icon">
+                          <a href="{!! url('my-profile'); !!}" class="dropdown-item ai-icon">
                               <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                               <span class="ml-2">Profile </span>
                           </a>
@@ -68,10 +67,4 @@
   @yield('breadcrumb')
 
 
-  {{-- <div class="page-titles mt-0 breadcrumb-custom">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item active"><a href="javascript:void(0)">Courses</a></li>
-          <li class="breadcrumb-item"><a href="javascript:void(0)">IMB 20503 - Multimedia Insrtuctional Design</a></li>
-      </ol>
-  </div> --}}
 </div>

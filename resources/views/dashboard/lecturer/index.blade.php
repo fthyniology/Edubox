@@ -11,6 +11,36 @@
 
 @section('content')
 <div class="row">
+	<div class="col-xl-6 col-lg-6 col-sm-6" >
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+						<div class="col-2">
+							<div class="dashboard-user">
+								<img src="{{ asset('images/profile/teacher.png') }}" class="img-fluid rounded-circle" alt="">
+							</div>
+						</div>
+						<div class="col-10 d-flex justify-content-between">
+							<div class="dashboard-welcome">
+								<h4>
+									Hi! Welcome back Teacher!
+								</h4>
+								<p>
+									What do you need for today?
+								</p>
+								<a href="{{ url('student-quiz-attempt') }}" class="btn btn-outline-primary btn-xs">
+									<i class="fa fa-eye mr-1"></i>
+									View Syllabus
+								</a>
+							</div>
+							<div class="dashboard-card-bg">
+								<img  class="img-fluid pr-4" width="190px" src="{{ asset('images/edubox/welcome.svg') }}" alt="">
+							</div>							
+						</div>
+				</div>				
+			</div>
+		</div>
+	</div>
 	<div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-4" >
 		<div class="widget-stat card">
 			<div class="card-body p-4">
@@ -35,30 +65,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-4">
-		<div class="widget-stat card">
-			<div class="card-body p-4">
-				<h4 class="card-title">Total Course</h4>
-				<h3>28</h3>
-				<div class="progress mb-2">
-					<div class="progress-bar progress-animated bg-red" style="width: 76%"></div>
-				</div>
-				<small>76% Increase in 20 Days</small>
-			</div>
-		</div>
-	</div>
-	<div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-4">
-		<div class="widget-stat card">
-			<div class="card-body p-4">
-				<h4 class="card-title">Total Submission</h4>
-				<h3>270 subs</h3>
-				<div class="progress mb-2">
-					<div class="progress-bar progress-animated bg-success" style="width: 30%"></div>
-				</div>
-				<small>30% Increase in 30 Days</small>
-			</div>
-		</div>
-	</div>
 	<div class="col-xl-8 col-lg-8">
 		<div class="card">
 			<div class="card-body">
@@ -78,10 +84,10 @@
 						<i class="fs-22 fa fa-graduation-cap text-white" aria-hidden="true"></i>
 					</div>
 					<div class="media-body">
-						<h6 class="fs-16 mb-0">Abu RohazemeeKari</h6>
+						<h6 class="fs-16 mb-0">Baiduri Binti Anwar</h6>
 						<div class="d-flex">
-							<span class="fs-14 mr-auto">Assigment 1</span>
-							<span class="fs-14">2m ago</span>
+							<span class="fs-14 mr-auto">Quiz Attempt : Quiz 3</span>
+							<span class="fs-14">2hr ago</span>
 						</div>
 					</div>
 				</div>
@@ -90,10 +96,10 @@
 						<i class="fs-22 fa fa-graduation-cap text-white" aria-hidden="true"></i>
 					</div>
 					<div class="media-body">
-						<h6 class="fs-16 mb-0">Jamal Abdellah Bin Sufian Cheng Hock</h6>
+						<h6 class="fs-16 mb-0">Kamila Chan</h6>
 						<div class="d-flex">
-							<span class="fs-14 mr-auto">Quiz attempted</span>
-							<span class="fs-14">11m ago</span>
+							<span class="fs-14 mr-auto">Quiz Attempt : Quiz 3</span>
+							<span class="fs-14">yesterday</span>
 						</div>
 					</div>
 				</div>
@@ -102,9 +108,9 @@
 						<i class="fs-22 fa fa-graduation-cap text-white" aria-hidden="true"></i>
 					</div>
 					<div class="media-body">
-						<h6 class="fs-16 mb-0">Fizmal Samsul</h6>
+						<h6 class="fs-16 mb-0">Baiduri Binti Anwar</h6>
 						<div class="d-flex">
-							<span class="fs-14 mr-auto">Assigment 1</span>
+							<span class="fs-14 mr-auto">Quiz Attempt : Quiz 2</span>
 							<span class="fs-14">11d ago</span>
 						</div>
 					</div>
@@ -114,10 +120,10 @@
 						<i class="fs-22 fa fa-graduation-cap text-white" aria-hidden="true"></i>
 					</div>
 					<div class="media-body">
-						<h6 class="fs-16 mb-0">Fazullah Jamaica</h6>
+						<h6 class="fs-16 mb-0">Kamila Chan</h6>
 						<div class="d-flex">
-							<span class="fs-14 mr-auto">Assignment 2</span>
-							<span class="fs-14">2month ago</span>
+							<span class="fs-14 mr-auto">Quiz Attempt : Quiz 2</span>
+							<span class="fs-14">2w ago</span>
 						</div>
 					</div>
 				</div>
@@ -126,34 +132,10 @@
 						<i class="fs-22 fa fa-graduation-cap text-white" aria-hidden="true"></i>
 					</div>
 					<div class="media-body">
-						<h6 class="fs-16 mb-0">Nik Wan Abudllah</h6>
+						<h6 class="fs-16 mb-0">Eckward Kid</h6>
 						<div class="d-flex">
-							<span class="fs-14 mr-auto">Final Project</span>
-							<span class="fs-14">32m ago</span>
-						</div>
-					</div>
-				</div>
-				<div class="media pb-3 border-bottom mb-3 align-items-center">
-					<div class="ticket-icon mr-3 bg-success">
-						<i class="fs-22 fa fa-graduation-cap text-white" aria-hidden="true"></i>
-					</div>
-					<div class="media-body">
-						<h6 class="fs-16 mb-0">Sufi Zulaikha</h6>
-						<div class="d-flex">
-							<span class="fs-14 mr-auto">Assignment 2</span>
-							<span class="fs-14">2m ago</span>
-						</div>
-					</div>
-				</div>
-				<div class="media pb-3 border-bottom mb-3 align-items-center">
-					<div class="ticket-icon mr-3 bg-primary">
-						<i class="fs-22 fa fa-graduation-cap text-white" aria-hidden="true"></i>
-					</div>
-					<div class="media-body">
-						<h6 class="fs-16 mb-0">Safiah Akiah</h6>
-						<div class="d-flex">
-							<span class="fs-14 mr-auto">Final Project</span>
-							<span class="fs-14">2m ago</span>
+							<span class="fs-14 mr-auto">Quiz Attempt : Quiz 1</span>
+							<span class="fs-14">2 month ago</span>
 						</div>
 					</div>
 				</div>

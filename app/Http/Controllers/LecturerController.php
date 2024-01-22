@@ -30,6 +30,21 @@ class LecturerController extends Controller
         return view('dashboard.lecturer.lecturerSetting.course.lecturercourse');
     }
 
+    public function pastpaper()
+    {
+        return view('dashboard.lecturer.pastpaper');
+    }
+
+    
+    public function bookshelf()
+    {
+        return view('dashboard.lecturer.lecturerSetting.bookshelf.bookshelf');
+    }
+    public function quizresult()
+    {
+        return view('dashboard.lecturer.lecturerSetting.quiz.quizresult');
+    }
+
     /**
      * Display the list of students assigned to the lecturer.
      *

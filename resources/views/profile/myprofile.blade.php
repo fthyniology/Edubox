@@ -18,33 +18,52 @@
                 <div class="photo-content">
                     <div class="cover-photo"></div>
                 </div>
+
+                @if(auth()->user()->hasRole('lecturer'))
                 <div class="profile-info">
                     <div class="profile-photo">
-                        @if(auth()->user()->hasRole('lecturer'))
-                            <img src="{{ asset('images/profile/caid.png') }}" class="img-fluid rounded-circle" alt="">
-                        @elseif(auth()->user()->hasRole('student'))
-                            <img src="{{ asset('images/profile/kim.png') }}" class="img-fluid rounded-circle" alt="">
-                        @endif 
+                        <img src="{{ asset('images/profile/Teacher.png') }}" class="img-fluid rounded-circle" alt="">
                     </div>
                     <div class="profile-details">
                         <div class="profile-name px-3 pt-2">
-                            @if(auth()->user()->hasRole('lecturer'))
-                                <h4 class="text-primary mb-0">Syahid Azizan</h4>
-                            @elseif(auth()->user()->hasRole('student'))
-                                <h4 class="text-primary mb-0">Wan Muhammad Irfan</h4>
-                            @endif 
-                            <p>Bachelor in Multimedia Design</p>
+                            <h4 class="text-primary mb-0">Farzani Haikal Bin Rosyam Nur</h4>
+                            <p>Science Form 5 Teacher</p>
                         </div>
                         <div class="profile-email px-2 pt-2">
-                            @if(auth()->user()->hasRole('lecturer'))
-                                <h4 class="text-muted mb-0">Hassan@unikl.edu.my</h4>
-                            @elseif(auth()->user()->hasRole('student'))
-                                <h4 class="text-muted mb-0">irfan@s.unikl.edu.my</h4>
-                            @endif 
+                            <h4 class="text-muted mb-0">zani@gmail.com</h4>
                             <p>Email</p>
+                        </div>
+                        <div class="ml-auto">
+                            <a href="{!! url('edit-my-profile'); !!}" class="btn btn-outline-success btn-xs">
+                                <i class="fa fa-pencil-square-o"></i>
+                                Edit My Profile
+                            </a>
                         </div>
                     </div>
                 </div>
+                @elseif(auth()->user()->hasRole('student'))
+                <div class="profile-info">
+                    <div class="profile-photo">
+                        <img src="{{ asset('images/profile/student-female.png') }}" class="img-fluid rounded-circle" alt="">
+                    </div>
+                    <div class="profile-details">
+                        <div class="profile-name px-3 pt-2">
+                            <h4 class="text-primary mb-0">Baiduri Binti Anwar</h4>
+                            <p>Student</p>
+                        </div>
+                        <div class="profile-email px-2 pt-2">
+                            <h4 class="text-muted mb-0">baiduri@gmail.com</h4>
+                            <p>Email</p>
+                        </div>
+                        <div class="ml-auto">
+                            <a href="{!! url('edit-my-profile'); !!}" class="btn btn-outline-success btn-xs">
+                                <i class="fa fa-pencil-square-o"></i>
+                                Edit My Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                @endif
             </div>
         </div>
     </div>
@@ -58,10 +77,10 @@
                     <div class="text-center">
                         <div class="row">
                             <div class="col">
-                                <h3 class="m-b-0">55</h3><span>Total Credit Hour</span>
+                                <h3 class="m-b-0">55</h3><span>Total Subject Registered</span>
                             </div>
                             <div class="col">
-                                <h3 class="m-b-0">8</h3><span>Current Course</span>
+                                <h3 class="m-b-0">8</h3><span>Total Quiz Taken</span>
                             </div>
                         </div>
                     </div>
@@ -76,23 +95,29 @@
                 <ul class="nav nav-pills light">
                     @if(auth()->user()->hasRole('lecturer'))
                     <li class=" nav-item">
-                        <a href="#navpills-1" class="nav-link active" data-toggle="tab" aria-expanded="false">
-                            Student Activity Log
+                        <a href="#navpills-1T" class="nav-link active" data-toggle="tab" aria-expanded="false">
+                            My Student
+                        </a>
+                    </li>
+                    <li class=" nav-item">
+                        <a href="#navpills-2T" class="nav-link" data-toggle="tab" aria-expanded="false">
+                            Student Quiz Attempt
                         </a>
                     </li>
                     @elseif(auth()->user()->hasRole('student'))
                     <li class=" nav-item">
-                        <a href="#navpills-1" class="nav-link active" data-toggle="tab" aria-expanded="false">
-                            Activity Log
+                        <a href="#navpills-1S" class="nav-link active" data-toggle="tab" aria-expanded="false">
+                            My Subject
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#navpills-2S" class="nav-link" data-toggle="tab" aria-expanded="false">
+                            Quiz Results
                         </a>
                     </li>
                     @endif
 
-                    <li class="nav-item">
-                        <a href="#navpills-2" class="nav-link" data-toggle="tab" aria-expanded="false">
-                            Assesment
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -101,111 +126,173 @@
         <div class="card">
             <div class="card-body">
                 <div class="tab-content">
-                    <div id="navpills-1" class="tab-pane active">
+                @if(auth()->user()->hasRole('lecturer'))
+                    <div id="navpills-1T" class="tab-pane active">
                         <div class="table-responsive">
                             <table id="example2" class="table table-hover table-responsive-md">
                                 <thead>
                                     <tr>
-                                        <th>Subject Name</th>
-                                        <th>Topic</th>
-                                        <th>Date Submission</th>
-                                        <th>Grade</th>
+                                        <th>Student Name</th>
+                                        <th>Class</th>
+                                        <th>Date registered</th>
+                                        <th>Quiz Taken</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Multimedia Insrtuctional Design</td>
-                                        <td>Assignment 2</td>
+                                        <td>
+                                            <a href="{!! url('preview-profile'); !!}">
+                                                Baiduri Binti Anwar
+                                            </a>
+                                        </td>
+                                        <td>Science Form 5</td>
                                         <td>23/05/2023</td>
-                                        <td>80%</td>
-                                    </tr>
+                                        <td>7</td>
+                                    </tr>                                    
                                     <tr>
-                                        <td>Digital Post Production</td>
-                                        <td>Lab Task 2</td>
-                                        <td>15/04/2023</td>
-                                        <td>10/15m</td>
-                                    </tr>
+                                        <td>
+                                            <a href="">
+                                                Kamila Chan
+                                            </a>
+                                        </td>
+                                        <td>Science Form 5</td>
+                                        <td>23/05/2023</td>
+                                        <td>7</td>
+                                    </tr>                                    
                                     <tr>
-                                        <td>Professional English 2</td>
-                                        <td>Research Report</td>
-                                        <td>12/04/2023</td>
-                                        <td>66</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mandarin 1</td>
-                                        <td>Quiz 1</td>
-                                        <td>02/04/2023</td>
-                                        <td>22</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Digital Image</td>
-                                        <td>Assignment 1</td>
-                                        <td>28/03/2023</td>
-                                        <td>33</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Typography</td>
-                                        <td>Portfolio</td>
-                                        <td>17/03/2023</td>
-                                        <td>61</td>
-                                    </tr>
+                                        <td>
+                                            <a href="">
+                                                Eckward Kid
+                                            </a>
+                                        </td>
+                                        <td>Science Form 5</td>
+                                        <td>23/05/2023</td>
+                                        <td>7</td>
+                                    </tr>                                    
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div id="navpills-2" class="tab-pane">
-                        <h4 class="mb-4">Upcoming Assesment</h4>
+                    <div id="navpills-2T" class="tab-pane">
+                        <!-- <h4 class="mb-4">Upcoming Assesment</h4> -->
                         <div class="table-responsive">
                             <table id="example5" class="table table-hover table-responsive-md">
                                 <thead>
                                     <tr>
-                                        <th>Subject Name</th>
-                                        <th>Topic</th>
-                                        <th>Due Date</th>
-                                        <th>To Be Grade</th>
+                                        <th>Student Name</th>
+                                        <th>Quiz</th>
+                                        <th>Date Attempt</th>
+                                        <th>Result</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Multimedia Insrtuctional Design</td>
-                                        <td>Final Project Proposal</td>
+                                        <td>Baiduri Binti Anwar</td>
+                                        <td>Quiz Chapter 3</td>
                                         <td>23/6/2023</td>
-                                        <td>TBM</td>
+                                        <td>
+                                            <h6 class="badge light badge-success">8/10</h6>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>Digital Post Production</td>
-                                        <td>Assignment 3</td>
-                                        <td>15/05/2023</td>
-                                        <td>TBM</td>
+                                        <td>Kamila Chan</td>
+                                        <td>Quiz Chapter 3</td>
+                                        <td>23/6/2023</td>
+                                        <td>
+                                            <h6 class="badge light badge-danger">2/10</h6>                                            
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>Professional English 2</td>
-                                        <td>Research Slide</td>
-                                        <td>12/05/2023</td>
-                                        <td>TBM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mandarin 1</td>
-                                        <td>Video Dialogue</td>
-                                        <td>02/04/2023</td>
-                                        <td>TBM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Digital Image</td>
-                                        <td>Assignment 2</td>
-                                        <td>28/05/2023</td>
-                                        <td>TBM</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Typography</td>
-                                        <td>Final Test</td>
-                                        <td>17/06/2023</td>
-                                        <td>TBM</td>
+                                        <td>Eckward Kid</td>
+                                        <td>Quiz Chapter 3</td>
+                                        <td>23/6/2023</td>
+                                        <td>
+                                            <h6 class="badge light badge-dark">No Attempt</h6>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
+                    @elseif(auth()->user()->hasRole('student'))
+                        <div id="navpills-1S" class="tab-pane active">
+                            <div class="table-responsive">
+                                <table id="example2" class="table table-hover table-responsive-md">
+                                    <thead>
+                                        <tr>
+                                            <th>Teacher Name</th>
+                                            <th>Subject</th>
+                                            <th>Date registered</th>
+                                            <th>Quiz Taken</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="{!! url('preview-profile'); !!}">
+                                                    Farzani Haikal Bin Rosyam Nur
+                                                </a>
+                                            </td>
+                                            <td>Science Form 5</td>
+                                            <td>23/01/2023</td>
+                                            <td>7</td>
+                                        </tr>                                  
+                                        <tr>
+                                            <td>
+                                                <a href="">
+                                                    Lily Cheng
+                                                </a>
+                                            </td>
+                                            <td>Science Form 4</td>
+                                            <td>23/05/2022</td>
+                                            <td>7</td>
+                                        </tr>                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="navpills-2S" class="tab-pane">
+                            <!-- <h4 class="mb-4">Upcoming Assesment</h4> -->
+                            <div class="table-responsive">
+                                <table id="example5" class="table table-hover table-responsive-md">
+                                    <thead>
+                                        <tr>
+                                            <th>Quiz</th>
+                                            <th>Chapter</th>
+                                            <th>Date Attempted</th>
+                                            <th>Result</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Quiz Chapter 3</td>
+                                            <td>Chapter 3 : Mikroorganisma</td>
+                                            <td>12/05/2023</td>
+                                            <td>
+                                                <label class="badge light badge-dark">No Attempt</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quiz Chapter 2</td>
+                                            <td>Chapter 2 : Mikroorganisma</td>
+                                            <td>15/05/2023</td>
+                                            <td>
+                                                <label class="badge light badge-danger">2/10</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quiz Chapter 1</td>
+                                            <td>Chapter 1 : Safety Measures in Laboratory</td>
+                                            <td>23/6/2023</td>
+                                            <td>
+                                                <label class="badge light badge-success">8/10</label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

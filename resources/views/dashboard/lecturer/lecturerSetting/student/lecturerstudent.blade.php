@@ -26,14 +26,15 @@
                 <table class="table table-responsive-md">
                     <thead>
                         <tr>
-                            <th><strong>Student ID</strong></th>
                             <th><strong>Student Name</strong></th>
-                            <th><strong>Student Email</strong></th>
-                            <th><strong>Student Course Group (Class)</strong></th>
+                            <th><strong>Subject Taken</strong></th>
+                            <th><strong>Student's Teacher</strong></th>
+                            <th><strong>Date Registered</strong></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($students as $student)
+                        <!-- @foreach ($students as $student)
                             <tr>
                                 <td><strong>{{ $student->student_id ?? '' }}</strong></td>
                                 <td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">{{ $student->name ?? '' }}</span></div></td>
@@ -46,7 +47,37 @@
                                     </div>
                                 </td>
                             </tr>
-                        @endforeach
+                        @endforeach -->
+                        <tr>
+                            <td>Baiduri Binti Anwar</td>
+                            <td>
+                                <ul>
+                                    <li>Science Form 5</li>
+                                    <li>Science Form 4</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Farzani Haikal</li>
+                                    <li>Lily Cheng</li>
+                                </ul>
+                            </td>
+                            <td>
+                                22/02/2023
+                            </td>
+                            <td>
+                                <div class="float-right">
+                                    <button type="button" class="btn btn-success btn-xs">
+                                        <i class="fa fa-pencil-square-o mr-1"></i>
+                                        Edit
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash mr-1"></i>
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
