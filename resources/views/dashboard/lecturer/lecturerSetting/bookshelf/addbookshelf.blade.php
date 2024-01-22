@@ -21,44 +21,27 @@
                         Add Chapter
                     </h4>
                 </div>
-                <div class="card-body">
-                    <h4 class="mb-4">Syllabus Title</h4>
-                    <div class="form-row">
-                        <!-- <div class="form-group col-md-4">
-                            <label>Add Bookshelf</label>
-                            <select class="form-control" id="bookshelf_type" name="bookshelf_type">
-                                <option value="" disabled selected>Choose One</option>
-                                <option value="1">Lecture notes</option>
-                                <option value="2">Extra Readings</option>
-                            </select>
-                        </div> -->
-                        <div class="form-group col-md-4">
-                            <label>Chapter or Notes (.pdf)</label>
-                            <input id="course_image" name="course_image" type="file" class="dropify" required placeholder="Teacher's Notes File or Chapter">
+                <form action="{{ route('chapters.store', $course->id) }}" id="form-store-chapter" class="needs-validation" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label>Chapter or Notes (.pdf)</label>
+                                <input id="file" name="file" type="file" class="dropify" required placeholder="Teacher's Notes File or Chapter">
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                                <label>Chapters Title</label>
+                                <input id="title" name="title" type="text" class="form-control" placeholder="Chapters Title">
+                            </div>
+                            <input type="hidden" name="course_id" value="{{ $course->id }}">
                         </div>
-                        
-                        <div class="form-group col-md-6">
-                            <label>Chapters Title</label>
-                            <input id="bookshelf_name" name="bookshelf_name" type="text" class="form-control" placeholder="Bookshelf Name">
-                        </div>
-                        <!-- <div class="form-group col-md-12 extra-reading-div">
-                            <label>Extra Readings URL</label>
-                            <input id="extra_reading_url" name="extra_reading_url" type="text" class="form-control" placeholder="Extra Readings URL">
-                        </div>
-                        <div class="form-group col-md-12 extra-reading-div">
-                            <label>Extra Readings URL</label>
-                            <input id="extra_reading_url" name="extra_reading_url" type="text" class="form-control" placeholder="Extra Readings URL">
-                        </div>
-                        <div class="form-group col-md-12 lecture-note-div">
-                            <label>Lecture Notes Files</label>
-                            <input id="lecture_note_files" name="lecture_note_files" type="file" class="dropify" placeholder="Lecture Note File">
-                        </div> -->
                     </div>
-                </div>
-                <div class="card-footer">
-                        <button type="submit" class="btn btn-success light float-right">Save changes</button>
-                        <button type="" class="btn btn-danger light float-right mr-2">cancel</button>
-                </div>
+                    <div class="card-footer">
+                            <button type="submit" class="btn btn-success light float-right">Save changes</button>
+                            <button type="" class="btn btn-danger light float-right mr-2">cancel</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

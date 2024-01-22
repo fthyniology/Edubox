@@ -43,7 +43,7 @@
                                     <td>{{ $course->assessments->count() ?? '' }}</td>
                                     <td>
                                         <div class="float-right">
-                                            <a href="{{ url('/all-chapters') }}" class="btn btn-info btn-xs">
+                                            <a href="{{ route('all-chapters', $course->id) }}" class="btn btn-info btn-xs">
                                                 <i class="fa fa-eye mr-1"></i>
                                                 View Chapters
                                             </a>

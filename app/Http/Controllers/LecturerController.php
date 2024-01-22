@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -45,9 +46,9 @@ class LecturerController extends Controller
      *
      * @return \Illuminate\Contracts\View\View
      */
-    public function bookshelf(): View
+    public function bookshelf(Course $course): View
     {
-        return view('dashboard.lecturer.lecturerSetting.bookshelf.bookshelf');
+        return view('dashboard.lecturer.lecturerSetting.bookshelf.bookshelf', compact('course'));
     }
 
     /**

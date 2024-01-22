@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\ChapterController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\LecturerController;
@@ -61,7 +62,7 @@ Route::group([
     Route::post('/lecturer/store/students', [LecturerController::class, 'student_store'])->name('student.store');
     Route::get('/lecturer-quiz-setting', [LecturerController::class, 'lecturerquizsetting'])->name('course.lecturerquizsetting');
 
-    Route::get('/all-chapters', [LecturerController::class, 'bookshelf'])->name('bookshelf.bookshelf');
+    Route::get('/all-bookshelf/{course}', [LecturerController::class, 'bookshelf'])->name('all-bookshelf');
     Route::get('/student-quiz-attempt', [LecturerController::class, 'quizresult'])->name('quiz.quizresult');
 
     // tambah add
@@ -69,4 +70,8 @@ Route::group([
     Route::get('/course-setting/add-annoucement', [AnnouncementController::class, 'create'])->name('lecturer.addannoucement');
     Route::post('/annoucement/store', [AnnouncementController::class, 'store'])->name('announcement.store');
     Route::post('/annoucement/comment/store{annoucement}', [AnnouncementController::class, 'comment_store'])->name('announcement.comment.store');
+    Route::resource('chapters', ChapterController::class);
+    Route::get('/lecturer-add-chapters/{course}', [ChapterController::class, 'create'])->name('add-chapters');
+    Route::get('/all-chapters/{course}', [ChapterController::class, 'index'])->name('all-chapters');
+    Route::post('/chapters/store/{course}', [ChapterController::class, 'store'])->name('chapters.store');
 });
