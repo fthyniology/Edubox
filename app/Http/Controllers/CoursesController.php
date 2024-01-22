@@ -43,7 +43,7 @@ class CoursesController extends Controller
     /**
      * Store a newly created course along with related bookshelf and assessment data.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request): RedirectResponse
@@ -103,7 +103,7 @@ class CoursesController extends Controller
     /**
      * Display the details of a specific course.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @param  \App\Models\Course  $course
      * @return \Illuminate\Contracts\View\View
      */
@@ -115,7 +115,7 @@ class CoursesController extends Controller
     /**
      * Display the submissions for a specific course.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @param  \App\Models\Course  $course
      * @return \Illuminate\Contracts\View\View
      */
@@ -127,7 +127,7 @@ class CoursesController extends Controller
     /**
      * Display the submission form for a specific assessment.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @param  \App\Models\Assessment  $assessment
      * @return \Illuminate\Contracts\View\View
      */
@@ -139,7 +139,7 @@ class CoursesController extends Controller
     /**
      * Store a submission for a specific assessment.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @param  \App\Models\Assessment  $assessment
      * @return \Illuminate\Http\RedirectResponse
      */

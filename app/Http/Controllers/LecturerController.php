@@ -30,17 +30,32 @@ class LecturerController extends Controller
         return view('dashboard.lecturer.lecturerSetting.course.lecturercourse');
     }
 
-    public function pastpaper()
+    /**
+     * Display the past paper management page for the lecturer.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function pastpaper(): View
     {
         return view('dashboard.lecturer.pastpaper');
     }
 
-    
-    public function bookshelf()
+    /**
+     * Display the bookshelf management page for the lecturer.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function bookshelf(): View
     {
         return view('dashboard.lecturer.lecturerSetting.bookshelf.bookshelf');
     }
-    public function quizresult()
+
+    /**
+     * Display the quiz result management page for the lecturer.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function quizresult(): View
     {
         return view('dashboard.lecturer.lecturerSetting.quiz.quizresult');
     }

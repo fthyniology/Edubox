@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\LecturerController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +30,6 @@ Route::group([
     'middleware' => ['auth', 'web'],
 ], function () {
     // Profile page
-    
     Route::get('/my-profile', [ProfileController::class, 'index'])->name('profile.myprofile');
     Route::get('/edit-my-profile', [ProfileController::class, 'editmyprofile'])->name('profile.editmyprofile');
     Route::get('/preview-profile', [ProfileController::class, 'previewprofile'])->name('profile.previewprofile');
@@ -53,8 +52,6 @@ Route::group([
     Route::post('/submission/store/{assessment}', [CoursesController::class, 'submission_store'])->name('student.submission.store');
     Route::get('/lecturer-submission-view/{course}', [CoursesController::class, 'view_submission'])->name('course.view.submission');
 
-    
-
     // Lecturer site
     Route::get('/lecturer', [LecturerController::class, 'index'])->name('course.index');
     Route::get('/lecturer-course', [CoursesController::class, 'lecturercourse'])->name('course.lecturercourse');
@@ -63,12 +60,10 @@ Route::group([
     Route::get('/lecturer-add-bookshelf', [LecturerController::class, 'addbookshelf'])->name('bookshelf.addbookshelf');
     Route::post('/lecturer/store/students', [LecturerController::class, 'student_store'])->name('student.store');
     Route::get('/lecturer-quiz-setting', [LecturerController::class, 'lecturerquizsetting'])->name('course.lecturerquizsetting');
-    // Route::get('/lecturer-annoucements', [LecturerController::class, 'lecturerannoucement'])->name('course.lecturerannoucement');
 
     Route::get('/all-chapters', [LecturerController::class, 'bookshelf'])->name('bookshelf.bookshelf');
     Route::get('/student-quiz-attempt', [LecturerController::class, 'quizresult'])->name('quiz.quizresult');
 
-    
     // tambah add
     Route::get('/course-setting/add-course', [LecturerController::class, 'lecturersettingaddcourse'])->name('lecturer.addcourse');
     Route::get('/course-setting/add-annoucement', [AnnouncementController::class, 'create'])->name('lecturer.addannoucement');
