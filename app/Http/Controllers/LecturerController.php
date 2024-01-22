@@ -3,39 +3,52 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class LecturerController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the main dashboard for the lecturer.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View
      */
-    public function index()
+    public function index(): View
     {
         return view('dashboard.lecturer.index');
     }
 
-    public function lecturercourse()
+    /**
+     * Display the lecturer's course settings in the dashboard.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function lecturercourse(): View
     {
         return view('dashboard.lecturer.lecturerSetting.course.lecturercourse');
     }
 
-    // public function lecturerannoucement()
-    // {
-    //     return view('dashboard.lecturer.lecturerSetting.annoucement.lecturerannoucement');
-    // }
-    public function lecturerstudent()
+    /**
+     * Display the list of students assigned to the lecturer.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function lecturerstudent(): View
     {
         $students = auth()->user()->students;
 
         return view('dashboard.lecturer.lecturerSetting.student.lecturerstudent', compact('students'));
     }
 
-
-    public function student_store(Request $request)
+    /**
+     * Store a newly created student in the database.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function student_store(Request $request): RedirectResponse
     {
         DB::beginTransaction();
 
@@ -65,101 +78,73 @@ class LecturerController extends Controller
         return redirect()->route('course.lecturerstudent')->with('success', 'User has been stored.');
     }
 
-    // Tambah add
-    public function lecturersettingaddcourse()
+    /**
+     * Display the form for adding a new course in the lecturer settings.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function lecturersettingaddcourse(): View
     {
         return view('dashboard.lecturer.lecturerSetting.course.addcourse');
     }
-    public function lecturersettingaddannoucement()
+
+    /**
+     * Display the form for adding a new announcement in the lecturer settings.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function lecturersettingaddannoucement(): View
     {
         return view('dashboard.lecturer.lecturerSetting.course.addannoucement');
     }
-    public function lecturersettingaddstudent()
+
+    /**
+     * Display the form for adding a new student in the lecturer settings.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function lecturersettingaddstudent(): View
     {
         return view('dashboard.lecturer.lecturerSetting.student.addstudent');
     }
 
-
-    public function lecturerviewsubmission()
+    /**
+     * Display the submissions for quizzes and assignments in the lecturer dashboard.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function lecturerviewsubmission(): View
     {
         return view('dashboard.lecturer.submission');
     }
-    public function lecturerquizsetting()
+
+    /**
+     * Display the quiz settings in the lecturer dashboard.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function lecturerquizsetting(): View
     {
         return view('dashboard.lecturer.lecturerSetting.quiz.quizsetting');
     }
-    public function addstudent()
+
+    /**
+     * Display the form for adding a new student in the lecturer settings.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function addstudent(): View
     {
         return view('dashboard.lecturer.lecturerSetting.student.addstudent');
     }
-    public function addbookshelf()
+
+    /**
+     * Display the form for adding a new bookshelf in the lecturer settings.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function addbookshelf(): View
     {
         return view('dashboard.lecturer.lecturerSetting.bookshelf.addbookshelf');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

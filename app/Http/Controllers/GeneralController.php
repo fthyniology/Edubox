@@ -2,17 +2,36 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\View\View;
+
 class GeneralController extends Controller
 {
-    public function index()
+    /**
+     * Display the welcome page.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function index(): View
     {
         return view('welcome');
     }
-    public function aboutus()
+
+    /**
+     * Display the about us page.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function aboutus(): View
     {
         return view('landing-page.aboutus');
     }
-    public function faq()
+
+    /**
+     * Display the frequently asked questions (FAQ) page.
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function faq(): View
     {
         return view('landing-page.FAQ');
     }
