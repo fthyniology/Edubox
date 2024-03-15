@@ -46,10 +46,10 @@
                                 <div class="form-group">
                                     <label>Class Group (select one):</label>
                                     <select class="form-control" id="class_group" name="class_group">
-                                        <option value="L01-B01">L01-B01</option>
-                                        <option value="L01-B02">L01-B02</option>
-                                        <option value="L01-B03">L01-B03</option>
-                                        <option value="L01-B04">L01-B04</option>
+                                        <option value="Scf4">Science Form 4</option>
+                                        <option value="Scf5">Science Form 5</option>
+                                        <option value="Scf4">Science Form 4</option>
+                                        <option value="Scf5">Science Form 5</option>
                                     </select>
                                 </div>
                             </div>

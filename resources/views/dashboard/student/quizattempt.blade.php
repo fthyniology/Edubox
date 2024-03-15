@@ -21,26 +21,25 @@
 		        <div class="tab-content">
                     <div id="navpills-Q1" class="tab-pane active">  
                         <h3>Question 1</h3>
-                        
                         <div class="form-group ml-4">
-                            <img class="img-fluid" src="{{ asset('images/edubox/quiz-1.png') }}" alt="">
-                            <p class="">Milo ais or Teh ais?</p>
+                            <img class="img-fluid" src="{{ asset('images/edubox/quiz/q1.png') }}" alt="">
+                            <p class="">The diagram shows two examples of microorganisms. What is this group of microorganisms?</p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
                                     <label class="form-check-label">
-                                        First radio
+                                        Fungus
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="gridRadios" value="option2">
                                     <label class="form-check-label">
-                                        Second radio
+                                        Virus
                                     </label>
                                 </div>
                                 <div class="form-check disabled">
                                     <input class="form-check-input" type="radio" name="gridRadios" value="option3">
                                     <label class="form-check-label">
-                                        Third disabled radio
+                                        Algae
                                     </label>
                                 </div>
                             
@@ -51,19 +50,154 @@
                         </div>
                     </div>
                     <div id="navpills-Q2" class="tab-pane">
-                        chapter 2
+                     <h3>Question 2</h3>
+                        <div class="form-group ml-4">
+                            <img class="img-fluid" src="{{ asset('images/edubox/quiz/q2.png') }}" alt="">
+                            <p class="">Show the vector that spreads the disease Which of the following diseases can be spread by this vector?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
+                                    <label class="form-check-label">
+                                        year's disease
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option2">
+                                    <label class="form-check-label">
+                                        Tinea Versicolor
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option3">
+                                    <label class="form-check-label">
+                                        Dengue Fever
+                                    </label>
+                                </div>
+                            
+                            <a type="button" href="#navpills-Q2" class="btn btn-outline-info float-right btn-xs">
+                                Next Question
+                                <i class="fa fa-chevron-right ml-1"></i>
+                            </a> 
+                        </div>
                     </div>
                     <div id="navpills-Q3" class="tab-pane">
-                        chapter 3
+                        <h3>Question 3</h3>
+                        <div class="form-group ml-4">
+                            <!-- <img class="img-fluid" src="{{ asset('images/edubox/quiz-1.png') }}" alt=""> -->
+                            <p class="">What natural phenomena play an important role in the nitrogen cycle?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
+                                    <label class="form-check-label">
+                                        Flood
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option2">
+                                    <label class="form-check-label">
+                                        Flash Flood
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option3">
+                                    <label class="form-check-label">
+                                        Hurricanes
+                                    </label>
+                                </div>
+                            
+                            <a type="button" href="#navpills-Q2" class="btn btn-outline-info float-right btn-xs">
+                                Next Question
+                                <i class="fa fa-chevron-right ml-1"></i>
+                            </a> 
+                        </div>
                     </div>
                     <div id="navpills-Q4" class="tab-pane">
-                        chapter 4
+                        <h3>Question 4</h3>
+                        <div class="form-group ml-4">
+                            <!-- <img class="img-fluid" src="{{ asset('images/edubox/quiz-1.png') }}" alt=""> -->
+                            <p class="">Which of the following is best for sterilizing a wound?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
+                                    <label class="form-check-label">
+                                        Antiseptic
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option2">
+                                    <label class="form-check-label">
+                                        Disinfectant
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option3">
+                                    <label class="form-check-label">
+                                        Ultraviolet Rays
+                                    </label>
+                                </div>
+                            
+                            <a type="button" href="#navpills-Q2" class="btn btn-outline-info float-right btn-xs">
+                                Next Question
+                                <i class="fa fa-chevron-right ml-1"></i>
+                            </a> 
+                        </div>
                     </div>
                     <div id="navpills-Q5" class="tab-pane">
-                        chapter 5
+                        <h3>Question 5</h3>
+                        <div class="form-group ml-4">
+                            <img class="img-fluid" src="{{ asset('images/edubox/quiz/q5.jpg') }}" alt="">
+                            <p class="">Are microorganisms helpful or harmful?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
+                                    <label class="form-check-label">
+                                        Helpful
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option2">
+                                    <label class="form-check-label">
+                                        Harmful
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option3">
+                                    <label class="form-check-label">
+                                        Both
+                                    </label>
+                                </div>
+                            
+                            <a type="button" href="#navpills-Q2" class="btn btn-outline-info float-right btn-xs">
+                                Next Question
+                                <i class="fa fa-chevron-right ml-1"></i>
+                            </a> 
+                        </div>
                     </div>
                     <div id="navpills-Q6" class="tab-pane">
-                        chapter 6
+                        <h3>Question 6</h3>
+                        <div class="form-group ml-4">
+                            <img class="img-fluid" src="{{ asset('images/edubox/quiz/q6.jpg') }}" alt="">
+                            <p class="">What is Penicillin (medicine) made from?</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
+                                    <label class="form-check-label">
+                                        Water
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option2">
+                                    <label class="form-check-label">
+                                        Sugar
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="gridRadios" value="option3">
+                                    <label class="form-check-label">
+                                        Algae
+                                    </label>
+                                </div>
+                            
+                            <a type="button" href="#navpills-Q2" class="btn btn-outline-info float-right btn-xs">
+                                Next Question
+                                <i class="fa fa-chevron-right ml-1"></i>
+                            </a> 
+                        </div>
                     </div>
                 </div>
             </div>
